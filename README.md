@@ -25,3 +25,10 @@ This paper presents a groundbreaking approach to predicting cancer prognosis usi
 
 ## Citation
 If you find our research useful, please cite our paper as follows:
+
+@article{sun2023contrastive,
+  title={Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values},
+  author={Sun, Anchen and Chen, Zhibin and Cai, Xiaodong},
+  journal={arXiv preprint arXiv:2306.06276},
+  year={2023}
+}
