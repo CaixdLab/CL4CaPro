@@ -22,8 +22,22 @@ This paper presents a groundbreaking approach to predicting cancer prognosis usi
 
 ## GitHub Repository
 We are committed to open-sourcing our research for the benefit of the scientific community. The codebase, along with detailed documentation on how to use our models, is available on GitHub at [https://github.com/CaixdLab/CL4CaPro]. We encourage other researchers to utilize our models and contribute to further advancements in the field.
-### Usage
-main_CLCP.py
+
+### Installation
+
+Before running this script, ensure you have Python installed on your system. You may also need to install additional dependencies if not already present. 
+
+```bash
+# Clone the repository (if applicable)
+git clone <https://github.com/CaixdLab/CL4CaPro>
+cd <CL4CaPro>
+
+# Install required Python packages based on your OS (if any)
+pip install -r requirements_Windows.txt
+pip install -r requirements_Ubuntu.txt
+```
+### Usage *main_CLCP.py*
+Train Contrastive Learning models for cancer datasets
 
 #### Training Configuration Guide
 
@@ -93,6 +107,88 @@ python main_CLCP.py --dataset CancerRNA --model_in_dim {input_dim} --model_n_hid
                --round 1 --lr_decay_epochs 0 --l2_rate {l2_rate} --split_class_num {split_class_num} \
                --os W --task WholeTimeSeq --cancer_group {cancer_group} --gpu_device {device} \
                --validation {validation} --epoch_early_stop 3000 --lr_early_stop 4.0
+```
+
+### Usage *GenerateFeatures.py*
+Generate Contrastive Learning model features for Cox models
+
+#### Feature Extraction Configuration Guide
+
+This guide outlines how to configure the feature extraction process from trained models using command-line arguments. The script allows you to specify various parameters, including the layer from which to extract features, model dimensions, batch size, learning rates, and more. Below is a description of each option available.
+
+##### Parameters
+
+- `--layer_name`: Specify the name of the layer from which to extract features. Default is `layer1`.
+- `--model_in_dim`: Input dimension of the model. Default is `16008`.
+- `--dim_1_list`: First dimension test list. Default is `5196`.
+- `--dim_2_list`: Second dimension test list. Default is `4096`.
+- `--dim_3_list`: Third dimension test list. Default is `4096`.
+- `--model_save_path`: Path where the model is saved. Default is `SupCLCP`.
+- `--batch_size`: Batch size for feature extraction. Default is `110`.
+- `--seed`: Random seed for reproducibility. Default is `1036`.
+- `--learning_rate_list`: Test learning rate list. Only a single value of `0.00005` by default.
+- `--l2_rate`: L2 normalization rate. Default is `0.01`.
+- `--round`: Number of validation rounds. Default is `1`.
+- `--split_class_num`: Number of classes into which the dataset is split. Default is `8`.
+- `--cancer_group`: Specify the cancer group (e.g., SM, NGT, MSE, CCPRC, HC, GG, DS, LC). Default is `SM`.
+- `--task`: Choose the task to train the model on. Options are `WholeTimeSeq` or `Risk`. Default is `WholeTimeSeq`.
+- `--gpu_device`: GPU device ID for training the model. Default is `0`.
+- `--validation`: Validation dataset to use. Default is `TCGA`.
+
+##### Example Usage
+
+To use these settings, add them as command-line arguments when executing your script. For example:
+
+```shell
+python GenerateFeatures.py --layer_name {layer name} --model_in_dim {input_dim} --dim_1_list {model_n_hidden_1} \
+                           --dim_2_list {model_out_dim} --dim_3_list {feat_dim} --batch_size {batch_size} \
+                           --l2_rate {l2_rate} --validation {validation} --seed {seed} --round 1 --gpu_device {device} \
+                           --learning_rate_list {lr} --split_class_num {split_class_num} --task WholeTimeSeq \
+                           --cancer_group {cancer_group}
+```
+
+### Usage *Analysis_Risk.py*
+Train different classification models to analysis AUC
+
+#### Analysis Configuration Guide
+
+This guide provides instructions for configuring the analysis of features extracted from trained models. By specifying various command-line arguments, users can tailor the analysis process to their specific needs, focusing on aspects like the model save path, seed for reproducibility, cancer group, and computing resources. Below are the available options along with their descriptions.
+
+##### Parameters
+
+- `--model_save_path`: Path to the directory where the model is saved. This is where the script will look for the extracted features. The default path is `SupCLCP`.
+- `--seed`: Random seed used for initializing the analysis to ensure reproducibility. The default value is `1036`.
+- `--cancer_group`: Specifies the cancer group to be analyzed. It supports various groups such as SM, NGT, MSE, CCPRC, HC, GG, DS, LC, etc., with the default being `SM`.
+- `--core`: The number of CPU cores reserved for running the script. This can be adjusted based on the available system resources to improve performance. The default value is `10`.
+
+##### Example Usage
+
+To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
+
+```shell
+python python Analysis_Risk.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
+```
+
+### Usage *Analysis_methods.py*
+Train different Cox models to analysis C-index or IBS
+
+#### Analysis Configuration Guide
+
+This guide provides instructions for configuring the analysis of features extracted from trained models. By specifying various command-line arguments, users can tailor the analysis process to their specific needs, focusing on aspects like the model save path, seed for reproducibility, cancer group, and computing resources. Below are the available options along with their descriptions.
+
+##### Parameters
+
+- `--cancer_group`: Specifies the cancer group to be analyzed. It supports various groups such as SM, NGT, MSE, CCPRC, HC, GG, DS, LC, etc., with the default being `SM`.
+- `--core`: The number of CPU cores reserved for running the script. This can be adjusted based on the available system resources to improve performance. The default value is `10`.
+- `--pooled`: Specifies the cancer group is a pooled group. It supports bool True or False, with the default being `False`.
+- `--os_flag`: Specify whether OS time is used or normal PFI time. It supports bool True or False, with the default being `False`.
+
+##### Example Usage
+
+To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
+
+```shell
+python python Analysis_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
 ## Citation
