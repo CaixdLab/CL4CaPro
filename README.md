@@ -37,7 +37,7 @@ This guide provides detailed instructions on how to configure and use the traini
 - `--num_workers`: Number of worker processes for loading data. Default is `16`.
 - `--epochs`: Total number of training epochs. Default is `2000`.
 - `--round`: Number of validation rounds. Default is `1`.
-- `--os`: Specify the operating system for experimental purposes. Choose 'W' for Windows or 'L' for Linux. Default is 'W'.
+- `--os`: Specify the operating system for experimental purposes. Choose `W` for Windows or `L` for Linux. Default is `W`.
 - `--gpu_device`: GPU device ID to use for training. Default is `0`.
 
 ##### Optimization
