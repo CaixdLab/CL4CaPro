@@ -2,6 +2,7 @@
 
 ## Authors
 - Anchen Sun
+- Elizabeth J. Franzmann
 - Zhibin Chen
 - Xiaodong Cai
 
