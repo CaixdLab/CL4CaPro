@@ -33,8 +33,8 @@ git clone <https://github.com/CaixdLab/CL4CaPro>
 cd <CL4CaPro>
 
 # Install required Python packages based on your OS (if any)
-pip install -r requirements_Windows.txt
-pip install -r requirements_Ubuntu.txt
+pip install -r environment_W.txt (For Windows OS, we tested on Windows 10)
+pip install -r environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2 LTS)
 ```
 ### Usage *main_CLCP.py*
 Train Contrastive Learning models for cancer datasets
