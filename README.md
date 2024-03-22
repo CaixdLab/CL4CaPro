@@ -1,7 +1,7 @@
 # Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
 
 ## Introduction
-For paper (https://arxiv.org/abs/2306.06276), we are committed to open-sourcing our research for the benefit of the scientific community. The codebase, along with detailed documentation on how to use our models, is available on GitHub at [https://github.com/CaixdLab/CL4CaPro]. We encourage other researchers to utilize our models and contribute to further advancements in the field.
+For our paper [https://arxiv.org/abs/2306.06276], we are committed to open-sourcing our research for the benefit of the scientific community. The codebase, along with detailed documentation on how to use our models, is available on GitHub at [https://github.com/CaixdLab/CL4CaPro]. We encourage other researchers to utilize our models and contribute to further advancements in the field.
 
 ### Installation
 
@@ -9,8 +9,8 @@ Before running this script, ensure you have Python installed on your system. You
 
 ```bash
 # Clone the repository (if applicable)
-git clone <https://github.com/CaixdLab/CL4CaPro>
-cd <CL4CaPro>
+git clone https://github.com/CaixdLab/CL4CaPro
+cd CL4CaPro
 
 # Install required Python packages based on your OS (if any)
 pip install -r environment_W.txt (For Windows OS, we tested on Windows 10)
