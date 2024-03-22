@@ -192,6 +192,10 @@ To perform an analysis with custom settings, you would use the command line to r
 python python Analysis_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
+### Public Models
+
+CL-based classifiers and CLCox models are publicly available via: https://drive.google.com/drive/folders/11s7uROFi1V7XFBOQWd8l2nefuMjxW3tt?usp=drive_link
+
 ## Citation
 If you find our research useful, please cite our paper as follows:
 
