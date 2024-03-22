@@ -12,9 +12,9 @@ Before running this script, ensure you have Python installed on your system. You
 git clone https://github.com/CaixdLab/CL4CaPro
 cd CL4CaPro
 
-# Install required Python packages based on your OS (if any)
-pip install -r environment_W.txt (For Windows OS, we tested on Windows 10)
-pip install -r environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2 LTS)
+# Install required Python packages based on your OS through anaconda (if any)
+conda env create -f environment_W.txt (For Windows OS, we tested on Windows 10)
+conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2 LTS)
 ```
 ### Usage *main_CLCP.py*
 Train Contrastive Learning models for cancer datasets
