@@ -15,6 +15,9 @@ cd CL4CaPro
 # Install required Python packages based on your OS through anaconda (if any)
 conda env create -f environment_W.txt (For Windows OS, we tested on Windows 10)
 conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2 LTS)
+
+# Activate corresponding conda env
+conda activate CL4CaPro_L/CL4CaPro_W
 ```
 ### Usage *main_CLCP.py*
 Train Contrastive Learning models for cancer datasets
