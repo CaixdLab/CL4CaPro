@@ -176,7 +176,7 @@ python python Analysis_methods.py --cancer_group BRCA --seed {seed} --core 20 > 
 
 ### Public Models
 
-CL-based classifiers and CLCox models are publicly available via: https://drive.google.com/drive/folders/11s7uROFi1V7XFBOQWd8l2nefuMjxW3tt?usp=drive_link
+CL-based classifiers and CLCox models are publicly available via: [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35)
 
 ## Citation
 If you find our research useful, please cite our paper as follows:
