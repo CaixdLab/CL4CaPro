@@ -130,7 +130,7 @@ python GenerateFeatures.py --layer_name {layer name} --model_in_dim {input_dim} 
                            --cancer_group {cancer_group}
 ```
 
-### Usage *Analysis_Risk.py*
+### Usage *Classifier_method.py*
 Train different classification models to analysis AUC
 
 #### Analysis Configuration Guide
@@ -149,10 +149,10 @@ This guide provides instructions for configuring the analysis of features extrac
 To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
 
 ```shell
-python python Analysis_Risk.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
+python python Classifier_method.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
-### Usage *Analysis_methods.py*
+### Usage *Cox_methods.py*
 Train different Cox models to analysis C-index or IBS
 
 #### Analysis Configuration Guide
@@ -171,7 +171,7 @@ This guide provides instructions for configuring the analysis of features extrac
 To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
 
 ```shell
-python python Analysis_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
+python python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
 ### Public Models

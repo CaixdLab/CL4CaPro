@@ -17,6 +17,11 @@ from xgbse.metrics import concordance_index
 import xgboost as xgb
 from scipy.interpolate import interp1d
 from cox_nnet import *
+'''
+For cox_nnet we reference in the 
+Github repo: https://github.com/xinformatics/coxnnet_py3/tree/master 
+Citation: Ching, Travers, Xun Zhu, and Lana X. Garmire. "Cox-nnet: an artificial neural network method for prognosis prediction of high-throughput omics data." PLoS computational biology 14.4 (2018): e1006076.
+'''
 
 def parse_option():
     parser = argparse.ArgumentParser('argument for analysis features extracted from trained models')
