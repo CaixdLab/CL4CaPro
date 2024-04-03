@@ -1,7 +1,9 @@
 # Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
 
-## Introduction
-For our paper [https://arxiv.org/abs/2306.06276], we are committed to open-sourcing our research for the benefit of the scientific community. The codebase, along with detailed documentation on how to use our models, is available on GitHub at [https://github.com/CaixdLab/CL4CaPro]. We encourage other researchers to utilize our models and contribute to further advancements in the field.
+## Overview of the computational pipeline
+This codebase on GitHub at [https://github.com/CaixdLab/CL4CaPro] contains all source codes for training and testing the contrastive learning (CL) models for predicting cancer prognosis using gene expression values developed in the paper cited at the end of this document. The models trained with the RNAs-seq and clinical data from The Cancer Genome Atlas (TCGA) are available on [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35), and codes for using these models are available in both this codebase and OneDrive. This codebase also includes the codes for validating the models trained with TCGA lung cancer and prostate cancer using two independent datasets: CPTAC-3 lung cancer dataset and DKFZ prostate cancer dataset.  
+
+
 
 ### Installation
 
@@ -20,7 +22,7 @@ conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
 
-## Usage of Individual Script
+## Usage of Individual Scripts
 
 ###  *main_CLCP.py*
 Train Contrastive Learning models for cancer datasets
