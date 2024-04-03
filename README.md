@@ -45,7 +45,7 @@ If the information of progression free interval (PFI) of each patient in the RNA
 ## Usage of Individual Scripts
 
 ###  *main_CLCP.py*
-Train Contrastive Learning models for cancer datasets
+Train supervised CL models
 
 #### Training Configuration Guide
 
