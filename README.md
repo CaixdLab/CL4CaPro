@@ -26,7 +26,7 @@ As described in the paper, we used two approaches to predict the proganosis of a
 [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook implements the pipeline of training and testing both the CL-based XGBoost (CL_XGBoost) classifier and the CL-based Cox (CLCox) model. The pipleline includes the following main steps
 <ul style="list-style-type:disc">
   <li>Load TCGA data</li>
-  <li>Train a CL model by calling the script Auto_Train_GPU.py</li>
+  <li>Train a CL model by calling the script Auto_Train_GPU.py, which in turn calls main_CLCP.py for training the CL model and GenerateFeatures.py for extracting features from the CL model. </li>
   <li>Train and test a XGBoost classifier by calling Classifier_method.py or a Cox model by calling Cox_methods.py</li>
 </ul>
 
