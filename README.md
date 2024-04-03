@@ -212,6 +212,8 @@ If you find our research useful, please cite our paper as follows:
 }
 
 ## Brief information of the paper
+### Title
+Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
 
 ### Authors
 - Anchen Sun
