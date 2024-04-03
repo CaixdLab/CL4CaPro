@@ -29,7 +29,7 @@ As described in the paper, we used two approaches to predict the proganosis of a
   <li>Train a CL model by calling the script Auto_Train_GPU.py, which in turn calls main_CLCP.py for training the CL model and GenerateFeatures.py for extracting features from the CL model. </li>
   <li>Train and test a XGBoost classifier by calling Classifier_method.py or a Cox model by calling Cox_methods.py</li>
 </ul>
-As described in the paper, the following three Cox models are trained: Cox-EN, Cox-XGB, and Cox-nnet, when Cox_methods.py is called.  To train the XGBoost classifer and the Cox-XGB model, the Python XGBoost module needs to be installed, which should have been done if the instllation script is run successfully. The Cox-nnet was downloaded from the following website: , and it should have been installed if the instllation script is run successfully.
+As described in the paper, the following three Cox models are trained: Cox-EN, Cox-XGB, and Cox-nnet, when Cox_methods.py is called.  To train the XGBoost classifer and the Cox-XGB model, the Python XGBoost module needs to be installed, which should have been done if the instllation script is run successfully. The Cox-nnet was downloaded from the following website: , and it should have been installed if the installation script is run successfully.
 
 
 ### Use the trained models 
