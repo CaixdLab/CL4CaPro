@@ -1,7 +1,7 @@
 # Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
 
 ## Overview of the computational pipeline
-This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all source codes for training and testing the contrastive learning (CL) models for predicting cancer prognosis using gene expression values developed in the paper cited at the end of this document. The models trained with the RNAs-seq and clinical data from The Cancer Genome Atlas (TCGA) are available on [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35), and codes for using these models are available in both this codebase and OneDrive. This codebase also includes the codes for validating the models trained with TCGA lung cancer and prostate cancer using two independent datasets: CPTAC-3 lung cancer dataset and DKFZ prostate cancer dataset. Moreover, this codebase contains the codes for training and tesing prognositic models using the 21 genes of Oncotype DX and all genes in a microarray dataset. 
+This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all source codes for training and testing the contrastive learning (CL) models for predicting cancer prognosis using gene expression values developed in the paper cited at the end of this document. The models trained with the RNAs-seq and clinical data from The Cancer Genome Atlas (TCGA) are available on [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35), and codes for using these models are available in both this codebase and OneDrive. This codebase also includes the codes for validating the models trained with TCGA lung cancer and prostate cancer using two independent datasets: CPTAC-3 lung cancer dataset and DKFZ prostate cancer dataset. Moreover, this codebase contains the codes for training and tesing prognositic models using the 21 genes of Oncotype DX and all genes in a microarray dataset, as described in the paper. 
 
 
 ### Installation
@@ -21,6 +21,12 @@ conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
 ### Training and testing CL-based classifiers or Cox models
+As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learning feature. 
+
+#### Training and testing the XGBoost classifier
+
+#### Training and testing Cox models
+
 
 ### Use the trained models 
  
