@@ -149,7 +149,7 @@ This guide provides instructions for configuring the analysis of features extrac
 To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
 
 ```shell
-python python Classifier_method.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
+python Classifier_method.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
 ### Usage *Cox_methods.py*
@@ -171,12 +171,20 @@ This guide provides instructions for configuring the analysis of features extrac
 To perform an analysis with custom settings, you would use the command line to run your script with the desired options. For example:
 
 ```shell
-python python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
+python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
+
+### Sample Model Training
+
+[*TrainCL4CaPro.ipynb*]() notebook is accessible on Github, offering comprehensive step-by-step instructions on how to effortlessly train a CL4CaPro model from the ground up and validate its performance.
 
 ### Public Models
 
 CL-based classifiers and CLCox models are publicly available via: [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35)
+
+### Predict Through Public Models
+
+Both the [*PredictThroughClassifierModel.ipynb*]() and [*PredictThroughCoxModel.ipynb*]() notebooks are accessible on Github and OneDrive. Simply place them alongside our publicly shared models in the same directory. Then, launch the Jupyter notebook, and by adhering to the provided instructions, select the cancer type and set the input file to predict outcomes directly using our public models.
 
 ## Citation
 If you find our research useful, please cite our paper as follows:
