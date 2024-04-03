@@ -20,7 +20,7 @@ conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
-### Training and testing CL-based classifiers or Cox models
+### Train and test CL-based classifiers or Cox models
 As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
 
 [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook implements the pipeline of training and testing both the CL-based XGBoost (CL_XGBoost) classifier and the CL-based Cox (CLCox) model. The pipleline includes the following main steps
@@ -33,7 +33,14 @@ As described in the paper, the following three Cox models are trained: Cox-EN, C
 
 
 ### Use the trained models 
- 
+
+CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35). Given a set of cancer RNA-Seq transcriptomes, one can use the script [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb) to input the transcriptome of each cancer patient to the CL-based classification model and categorize each patient into a low- or high-risk group of recurrence, or use the script [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb) to input the transcriptome of each cancer patient to each of three CLCox models (CLCox-EN, Cox-XGB, and Cox-nnet) to predict the harzards ratio. 
+
+If the information of progression free interval (PFI) of each patient in the RNA-Seq data set is available, the performance metrics of the classifier including the prediction acuracy, receiver operating characteristic (ROC) curve, and the area under the ROC curve (AUC) can be calculated using [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb), and the performance metrics of Cox models including c-index and integrated Brier score (IBS) can be calculated using [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb). 
+
+
+
+
 
 ## Usage of Individual Scripts
 
@@ -110,7 +117,7 @@ python main_CLCP.py --dataset CancerRNA --model_in_dim {input_dim} --model_n_hid
                --validation {validation} --epoch_early_stop 3000 --lr_early_stop 4.0
 ```
 
-### Usage *GenerateFeatures.py*
+###  *GenerateFeatures.py*
 Generate Contrastive Learning model features for Cox models
 
 #### Feature Extraction Configuration Guide
@@ -192,17 +199,7 @@ To perform an analysis with custom settings, you would use the command line to r
 python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
-### Sample Model Training
 
-[*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook is accessible on Github, offering comprehensive step-by-step instructions on how to effortlessly train a CL4CaPro model from the ground up and validate its performance.
-
-### Public Models
-
-CL-based classifiers and CLCox models are publicly available via: [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35)
-
-### Predict Through Public Models
-
-Both the [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb) and [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb) notebooks are accessible on Github and OneDrive. Simply place them alongside our publicly shared models in the same directory. Then, launch the Jupyter notebook, and by adhering to the provided instructions, select the cancer type and set the input file to predict outcomes directly using our public models.
 
 ## Citation
 If you find our research useful, please cite our paper as follows:
@@ -214,7 +211,7 @@ If you find our research useful, please cite our paper as follows:
   year={2023}
 }
 
-## Paper Briefly Intro
+## Brief information of the paper
 
 ### Authors
 - Anchen Sun
