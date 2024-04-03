@@ -21,11 +21,15 @@ conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
 ### Training and testing CL-based classifiers or Cox models
-As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learning feature. 
+As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
 
-#### Training and testing the XGBoost classifier
+[*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook implements the pipeline of training and testing both the CL-based XGBoost (CL_XGBoost) classifier and the CL-based Cox (CLCox) model. The pipleline includes the following main steps
+<ul style="list-style-type:disc">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
 
-#### Training and testing Cox models
 
 
 ### Use the trained models 
