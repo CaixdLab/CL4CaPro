@@ -176,7 +176,7 @@ python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.l
 
 ### Sample Model Training
 
-[*TrainCL4CaPro.ipynb*]() notebook is accessible on Github, offering comprehensive step-by-step instructions on how to effortlessly train a CL4CaPro model from the ground up and validate its performance.
+[*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook is accessible on Github, offering comprehensive step-by-step instructions on how to effortlessly train a CL4CaPro model from the ground up and validate its performance.
 
 ### Public Models
 
@@ -184,7 +184,7 @@ CL-based classifiers and CLCox models are publicly available via: [OneDrive](htt
 
 ### Predict Through Public Models
 
-Both the [*PredictThroughClassifierModel.ipynb*]() and [*PredictThroughCoxModel.ipynb*]() notebooks are accessible on Github and OneDrive. Simply place them alongside our publicly shared models in the same directory. Then, launch the Jupyter notebook, and by adhering to the provided instructions, select the cancer type and set the input file to predict outcomes directly using our public models.
+Both the [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb) and [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb) notebooks are accessible on Github and OneDrive. Simply place them alongside our publicly shared models in the same directory. Then, launch the Jupyter notebook, and by adhering to the provided instructions, select the cancer type and set the input file to predict outcomes directly using our public models.
 
 ## Citation
 If you find our research useful, please cite our paper as follows:
