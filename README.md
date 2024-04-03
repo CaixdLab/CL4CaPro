@@ -27,9 +27,9 @@ As described in the paper, we used two approaches to predict the proganosis of a
 <ul style="list-style-type:disc">
   <li>Load TCGA data</li>
   <li>Train a CL model by calling the script Auto_Train_GPU.py, which in turn calls main_CLCP.py for training the CL model and GenerateFeatures.py for extracting features from the CL model. </li>
-  <li>Train and test a XGBoost classifier by calling Classifier_method.py or a Cox model by calling Cox_methods.py</li>
+  <li>Train and test a XGBoost classifier by calling Classifier_method.py or a Cox model by calling GenerateFeatures.py</li>
 </ul>
-
+Of note, the Python XGBoost module needs to be installed, which should have been done if the instllation script is run successfully. As described in the paper, the following three Cox models are trained: Cox-EN, Cox-XGB, and Cox-nnet, when GenerateFeatures.py is called. 
 
 
 ### Use the trained models 
