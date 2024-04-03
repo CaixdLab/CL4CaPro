@@ -19,7 +19,10 @@ conda env create -f environment_L.txt (For Linux OS, we tested on Ubuntu 22.04.2
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
-### Usage *main_CLCP.py*
+
+## Usage of Individual Script
+
+###  *main_CLCP.py*
 Train Contrastive Learning models for cancer datasets
 
 #### Training Configuration Guide
@@ -130,7 +133,7 @@ python GenerateFeatures.py --layer_name {layer name} --model_in_dim {input_dim} 
                            --cancer_group {cancer_group}
 ```
 
-### Usage *Classifier_method.py*
+###  *Classifier_method.py*
 Train different classification models to analysis AUC
 
 #### Analysis Configuration Guide
@@ -152,7 +155,7 @@ To perform an analysis with custom settings, you would use the command line to r
 python Classifier_method.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.log &
 ```
 
-### Usage *Cox_methods.py*
+###  *Cox_methods.py*
 Train different Cox models to analysis C-index or IBS
 
 #### Analysis Configuration Guide
