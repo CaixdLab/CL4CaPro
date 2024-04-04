@@ -118,7 +118,7 @@ python main_CLCP.py --dataset CancerRNA --model_in_dim {input_dim} --model_n_hid
 ```
 
 ###  *GenerateFeatures.py*
-Generate Contrastive Learning model features for Cox models
+Extract features from a CL model.
 
 #### Feature Extraction Configuration Guide
 
@@ -156,7 +156,7 @@ python GenerateFeatures.py --layer_name {layer name} --model_in_dim {input_dim} 
 ```
 
 ###  *Classifier_method.py*
-Train different classification models to analysis AUC
+Train XGBoost classifiers using the training data and compute classification accuracy and AUC using the test data
 
 #### Analysis Configuration Guide
 
@@ -178,7 +178,7 @@ python Classifier_method.py --cancer_group BRCA --seed {seed} --core 20 > PlotLo
 ```
 
 ###  *Cox_methods.py*
-Train different Cox models to analysis C-index or IBS
+Train Cox models using training data and compute C-index and IBS using test data
 
 #### Analysis Configuration Guide
 
