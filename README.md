@@ -31,7 +31,7 @@ As described in the paper, we used two approaches to predict the proganosis of a
 </ul>
 As described in the paper, the following three Cox models are trained: Cox-EN, Cox-XGB, and Cox-nnet, when Cox_methods.py is called.  To train the XGBoost classifer and the Cox-XGB model, the Python XGBoost module needs to be installed, which should have been done if the instllation script is run successfully. The Cox-nnet was downloaded from the following website: , and it should have been installed if the installation script is run successfully.
 
-
+ 
 ### Use the trained models 
 
 CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35). Given a set of cancer RNA-Seq transcriptomes, one can use the script [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb) to input the transcriptome of each cancer patient to the CL-based classification model and categorize each patient into a low- or high-risk group of recurrence, or use the script [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb) to input the transcriptome of each cancer patient to each of three CLCox models (CLCox-EN, Cox-XGB, and Cox-nnet) to predict the harzards ratio. 
