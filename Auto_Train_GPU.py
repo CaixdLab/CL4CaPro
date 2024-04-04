@@ -9,14 +9,13 @@ def run_training(get_seed, device):
     # Fine-Tune 2 + 1 layers
     dim_1_list = [5196]
     dim_2_list = [2048]
-    dim_3_list = [512]
-    batch_size = 120
+    dim_3_list = [256]
+    batch_size = 110
     seed = get_seed
     train_epoch = 5000
     round_num = 1
     cancer_group = 'BRCA'
-    #validation = 'Affy'
-    validation = 'No'
+    task = 'Risk' # Change to 'WholeTimeSeq' for Cox
 
     if cancer_group == 'SM' or cancer_group == 'BLCA' or cancer_group == 'CESC' or cancer_group == 'HNSC' or cancer_group == 'LUSC':
         input_dim = 16008
@@ -43,10 +42,7 @@ def run_training(get_seed, device):
     elif cancer_group == 'OV':
         input_dim = 15962
 
-    if validation == 'Affy':
-        input_dim = 13235
-
-    split_class_num = 9
+    split_class_num = 2
     l2_list = [0.001, 0.0007, 0.0003]
     learning_rate_list = [0.00002]
 
@@ -56,6 +52,7 @@ def run_training(get_seed, device):
                 for l2_rate in l2_list:
                     for lr in learning_rate_list: #for round in range(round_num):
                         for round in range(round_num):
+                            #round = 1
                             model_n_hidden_1 = str(dim_1_list[i])
                             model_out_dim = str(dim_2_list[j])
                             feat_dim = str(dim_3_list[k])
@@ -69,8 +66,8 @@ def run_training(get_seed, device):
                                              + ' --learning_rate ' + str(lr) \
                                              + ' --round ' + str(round + 1) + ' --lr_decay_epochs 0' \
                                              + ' --l2_rate ' + str(l2_rate) + ' --split_class_num ' + str(split_class_num) \
-                                             + ' --os W --task WholeTimeSeq --cancer_group ' + cancer_group \
-                                             + ' --gpu_device ' + str(device) + ' --validation ' + validation
+                                             + ' --os W --task ' + task + ' --cancer_group ' + cancer_group \
+                                             + ' --gpu_device ' + str(device)
                                              #+ ' --epoch_early_stop 3000 --lr_early_stop 4.0' \
                                              #+ ' --epoch_early_stop 1600 --lr_early_stop 4.7' + ' --learning_rate 0.001'
 
@@ -80,27 +77,27 @@ def run_training(get_seed, device):
                             order_line = 'python GenerateFeatures.py --layer_name layer1 --model_in_dim ' + str(input_dim) + ' --dim_1_list ' \
                                          + model_n_hidden_1 + ' --dim_2_list ' \
                                          + model_out_dim + ' --dim_3_list ' + feat_dim + ' --batch_size ' \
-                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) + ' --validation ' + validation \
+                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) \
                                          + ' --seed ' + str(seed) + ' --round ' + str(round + 1) + ' --gpu_device ' + str(device) \
-                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task WholeTimeSeq --cancer_group ' + cancer_group
+                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task ' + task + ' --cancer_group ' + cancer_group
                             print('Execute following:', order_line)
                             os.system(order_line)
 
                             order_line = 'python GenerateFeatures.py --layer_name layer2 --model_in_dim ' + str(input_dim) + ' --dim_1_list ' \
                                          + model_n_hidden_1 + ' --dim_2_list ' \
                                          + model_out_dim + ' --dim_3_list ' + feat_dim + ' --batch_size ' \
-                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) + ' --validation ' + validation \
+                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) \
                                          + ' --seed ' + str(seed) + ' --round ' + str(round + 1) + ' --gpu_device ' + str(device) \
-                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task WholeTimeSeq --cancer_group ' + cancer_group
+                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task ' + task + ' --cancer_group ' + cancer_group
                             print('Execute following:', order_line)
                             os.system(order_line)
 
                             order_line = 'python GenerateFeatures.py --layer_name head --model_in_dim ' + str(input_dim) + ' --dim_1_list ' \
                                          + model_n_hidden_1 + ' --dim_2_list ' \
                                          + model_out_dim + ' --dim_3_list ' + feat_dim + ' --batch_size ' \
-                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) + ' --validation ' + validation \
+                                         + str(batch_size) + ' --l2_rate ' + str(l2_rate) \
                                          + ' --seed ' + str(seed) + ' --round ' + str(round + 1) + ' --gpu_device ' + str(device) \
-                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task WholeTimeSeq --cancer_group ' + cancer_group
+                                         + ' --learning_rate_list ' + str(lr) + ' --split_class_num ' + str(split_class_num) + ' --task ' + task + ' --cancer_group ' + cancer_group
                             print('Execute following:', order_line)
                             os.system(order_line)
     return 'Finish seed ' + str(get_seed) + ' on device ' + str(device)
@@ -122,6 +119,7 @@ with concurrent.futures.ProcessPoolExecutor(num_threads) as executor:
         # create a new thread and add it to the list
         for result in executor.map(run_training, seed_list[start:end], [0] * num_threads):
             print(result)
+
 
 with concurrent.futures.ProcessPoolExecutor(num_threads) as executor:
     for i in range(5):
