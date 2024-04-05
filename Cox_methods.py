@@ -17,6 +17,7 @@ from xgbse.metrics import concordance_index
 import xgboost as xgb
 from scipy.interpolate import interp1d
 from cox_nnet import *
+from Cal_IBS import BreslowEstimator
 '''
 For cox_nnet we reference in the 
 Github repo: https://github.com/xinformatics/coxnnet_py3/tree/master 
@@ -38,6 +39,7 @@ def parse_option():
     opt = parser.parse_args()
 
     return opt
+
 
 def estimate_baseline_survival(train_preds, y):
 
@@ -199,8 +201,16 @@ def process_each_pth(item, path, seed, cancer_group, pooled, method = 'coxEN'):
             scores = concordance_index_censored(y_test['Status'], y_test['Survival_in_days'], estimator.predict(x_test))
             c_index = round(scores[0], 6)
 
-            print(c_index)
-            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index])
+            train_preds = estimator.predict(x)
+
+            baseline_model = BreslowEstimator().fit(train_preds, y['Status'], y['Survival_in_days'])
+            survs = baseline_model.get_survival_function(test_pred)
+            preds = np.asarray([[fn(t) for t in times] for fn in survs])
+            scores = integrated_brier_score(y, y_test, preds, times)
+            ibs = round(scores[0], 6)
+
+            print(c_index, ibs)
+            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index, ibs])
 
         elif method == 'coxxgb':
 
@@ -235,7 +245,15 @@ def process_each_pth(item, path, seed, cancer_group, pooled, method = 'coxEN'):
             scores = concordance_index_censored(y_test['Status'], y_test['Survival_in_days'], test_preds)
             c_index = round(scores[0], 10)
 
-            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index])  # alphas=alpha_get,
+            baseline_model = BreslowEstimator().fit(train_preds, y['Status'], y['Survival_in_days'])
+            survs = baseline_model.get_survival_function(test_pred)
+            preds = np.asarray([[fn(t) for t in times] for fn in survs])
+            scores = integrated_brier_score(y, y_test, preds, times)
+            ibs = round(scores[0], 6)
+
+            print(c_index, ibs)
+
+            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index, ibs])
 
         elif method == 'coxnnet':
 
@@ -258,7 +276,15 @@ def process_each_pth(item, path, seed, cancer_group, pooled, method = 'coxEN'):
             scores = concordance_index_censored(y_test['Status'], y_test['Survival_in_days'], test_preds)
             c_index = round(scores[0], 10)
 
-            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index])
+            baseline_model = BreslowEstimator().fit(train_preds, y['Status'], y['Survival_in_days'])
+            survs = baseline_model.get_survival_function(test_pred)
+            preds = np.asarray([[fn(t) for t in times] for fn in survs])
+            scores = integrated_brier_score(y, y_test, preds, times)
+            ibs = round(scores[0], 6)
+
+            print(c_index, ibs)
+
+            ana_list.append(['_'.join(item.split('_')[:-1]) + '_' + str(seed), eachCancer, c_index, ibs])
 
         print(item, ' Analysis: ', eachCancer)
 
