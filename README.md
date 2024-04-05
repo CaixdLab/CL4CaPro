@@ -40,11 +40,13 @@ If the information of progression free interval (PFI) of each patient in the RNA
 
 
 ### CPTAC-3
+
 The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
 
 The gene mapping dictionary can be created using the [*CPTAC3_mapping_gen.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_mapping_gen.py) script. It may be necessary to manually verify certain mismatches between official symbol IDs and geneIDs due to updates in versions over recent decades. Once the mapping ID dictionary is finalized, the [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) script can be utilized to produce the CPTAC-3 dataset. This dataset is then applied to validate models trained on TCGA data. Subsequently, the [*GenerateFeatures_CPTAC3.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateFeatures_CPTAC3.py) script can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3.
 
 ### OncotypeDX
+
 The expression data, containing 22,268 features and 947 samples from the study by Zhao, Xi, et al., "Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status," published in BMC Cancer (volume 14, article 211, March 19, 2014, DOI:10.1186/1471-2407-14-211), is accessible for download at: https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb.
 
 Upon downloading the Affymetrix data, gene identification data can be produced by aligning the Affymetrix data using the GPL96 platform, available at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL96. Subsequently, features relevant to Oncotype DX can be isolated from the gene identification dataset, enabling the performance of validation experiments. Detailed procedures for these validation experiments are documented at [OncotypeDX](https://github.com/CaixdLab/CL4CaPro/blob/main/OncotypeDX.ipynb).
