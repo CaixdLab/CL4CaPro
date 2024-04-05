@@ -38,12 +38,13 @@ CL-based classifiers for 18 types of cancer and CLCox models for 19 types of can
 
 If the information of progression free interval (PFI) of each patient in the RNA-Seq data set is available, the performance metrics of the classifier including the prediction acuracy, receiver operating characteristic (ROC) curve, and the area under the ROC curve (AUC) can be calculated using [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb), and the performance metrics of Cox models including c-index and integrated Brier score (IBS) can be calculated using [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb). 
 
+## Reproduce results
 
-### CPTAC-3
+### CPTAC-3 & DKFZ
 
 The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
 
-The gene mapping dictionary can be created using the [*CPTAC3_mapping_gen.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_mapping_gen.py) script. It may be necessary to manually verify certain mismatches between official symbol IDs and geneIDs due to updates in versions over recent decades. Once the mapping ID dictionary is finalized, the [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) script can be utilized to produce the CPTAC-3 dataset. This dataset is then applied to validate models trained on TCGA data. Subsequently, the [*GenerateFeatures_CPTAC3.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateFeatures_CPTAC3.py) script can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3.
+The gene mapping dictionary can be created using the [*CPTAC3_mapping_gen.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_mapping_gen.py) script. It may be necessary to manually verify certain mismatches between official symbol IDs and geneIDs due to updates in versions over recent decades. Once the mapping ID dictionary is finalized, the [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) script can be utilized to produce the CPTAC-3 dataset. This dataset is then applied to validate models trained on TCGA data. Subsequently, the [*GenerateFeatures_CPTAC3.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateFeatures_CPTAC3.py) script can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3 through [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb).
 
 ### OncotypeDX
 
