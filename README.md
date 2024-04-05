@@ -40,6 +40,10 @@ If the information of progression free interval (PFI) of each patient in the RNA
 
 ## Reproduce results
 
+### TCGA Validation
+
+TCGA test dataset can be extracted by seed. Then the performance metrics of the classifier including the prediction acuracy, receiver operating characteristic (ROC) curve, and the area under the ROC curve (AUC) can be calculated using [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb), and the performance metrics of Cox models including c-index and integrated Brier score (IBS) can be calculated using [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb).
+
 ### CPTAC-3 & DKFZ
 
 The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
