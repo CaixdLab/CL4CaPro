@@ -42,7 +42,7 @@ If the information of progression free interval (PFI) of each patient in the RNA
 
 ### TCGA Validation
 
-TCGA test dataset can be extracted by seed. Then the performance metrics of the classifier including the prediction acuracy, receiver operating characteristic (ROC) curve, and the area under the ROC curve (AUC) can be calculated using [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb), and the performance metrics of Cox models including c-index and integrated Brier score (IBS) can be calculated using [*PredictThroughCoxModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughCoxModel.ipynb).
+To replicate our validation results on the TCGA dataset, users can specify a single cancer type or a group of cancer types in the [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook to train a personalized model using either a specific seed or a series of seeds. Following training, the model along with the contrastive learning features it generates will be automatically saved to your local directory. Subsequently, the performance metrics of the classifier, such as prediction accuracy, receiver operating characteristic (ROC) curve, and area under the ROC curve (AUC), can be determined using *Classifier_method.py*. Additionally, the performance metrics for Cox models, including the concordance index (c-index) and integrated Brier score (IBS), can be assessed using *Cox_method.py*.
 
 ### CPTAC-3 & DKFZ
 
