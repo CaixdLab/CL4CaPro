@@ -15,7 +15,7 @@ def run_training(get_seed, device):
     train_epoch = 5000
     round_num = 1
     cancer_group = 'BRCA'
-    task = 'Risk' # Change to 'WholeTimeSeq' for Cox
+    task = 'Risk' # use 'Risk" to train a classifier, use 'WholeTimeSeq' to train Cox models
 
     if cancer_group == 'SM' or cancer_group == 'BLCA' or cancer_group == 'CESC' or cancer_group == 'HNSC' or cancer_group == 'LUSC':
         input_dim = 16008
