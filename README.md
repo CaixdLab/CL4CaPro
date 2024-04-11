@@ -48,7 +48,7 @@ To replicate our validation results on the TCGA dataset, users can specify a sin
 
 The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
 
-The mapped CPTAC-3 is available at:  based on our supply mapping table [gene_dict_sample.csv](). 
+The mapped CPTAC-3 datasets are available at [folder](https://github.com/CaixdLab/CL4CaPro/tree/main/CPTAC-3) based on our supply mapping table [gene_dict_sample.csv](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC-3/gene_dict_sample.csv). 
 If you're interested in mapping the CPTAC-3 dataset independently, you can proceed with the steps outlined below: 1) The gene mapping dictionary can be created using the [*CPTAC3_mapping_gen.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_mapping_gen.py) script. 2) It may be necessary to manually verify certain mismatches between official symbol IDs and geneIDs due to updates in versions over recent decades. 3) Once the mapping ID dictionary is finalized, the [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) script can be utilized to produce the CPTAC-3 dataset. 
 
 The mapped dataset is then applied to validate models trained on TCGA data. Subsequently, the [*GenerateFeatures_CPTAC3.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateFeatures_CPTAC3.py) script can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3 through [*PredictThroughClassifierModel.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/PredictThroughClassifierModel.ipynb).
