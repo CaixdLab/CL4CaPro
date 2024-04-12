@@ -41,6 +41,7 @@ If the information of progression free interval (PFI) of each patient in the RNA
 ## Replicate the results in the paper
 
 ### Models trained with TCGA data
+The results for the CL-based classifiers in Figures 2-3 in the paper and for the CLCox models in Figure 4,  Extended Figures 1 and 4, and in Extended Tables 1 and 2 can be replicated as follows.   
 
 To replicate our validation results on the TCGA dataset, users can specify a single cancer type or a group of cancer types in the *Build Data for given cancer* section of [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook to train a personalized model using either a specific seed or a series of seeds. Following training, the model along with the contrastive learning features it generates will be automatically saved to your local directory. Subsequently, the performance metrics of the classifier, such as prediction accuracy, receiver operating characteristic (ROC) curve, and area under the ROC curve (AUC), can be determined using [*Classifier_method.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/Classifier_method.py). Additionally, the performance metrics for Cox models, including the concordance index (c-index) and integrated Brier score (IBS), can be assessed using [*Cox_method.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/Cox_methods.py).
 
@@ -53,7 +54,7 @@ If you're interested in mapping the CPTAC-3 or DKFZ dataset independently, you c
 
 The mapped dataset is then applied to validate models trained on TCGA data. Subsequently, the [*CPTAC3&DKFZ.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3%26DKFZ.ipynb) notebook can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3 and DKFZ validation.
 
-### Comparison of Cox models with 16 Oncotype DX genes and all genes in a microarray dataset
+### Comparison of Cox models with 16 Oncotype DX genes and all 13,235 genes in a microarray dataset
 
 The expression data, containing 22,268 features and 947 samples from the study by Zhao, Xi, et al., "Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status," published in BMC Cancer (volume 14, article 211, March 19, 2014, DOI:10.1186/1471-2407-14-211), is accessible for download at: https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb or in our OneDrive as [Affy947.RDS](https://miamiedu-my.sharepoint.com/:u:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models/AffyDataset/Affy947.RDS?csf=1&web=1&e=NKqv7B).
 
