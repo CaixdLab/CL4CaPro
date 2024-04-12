@@ -1,5 +1,6 @@
 import os
 import concurrent.futures
+import argparse
 
 seed_list = [10, 74, 341, 925, 1036, 1555, 1777, 2030, 2060, 2090, 2200,
              2222, 2268, 2289, 2341, 2741, 2765, 2782, 2857, 2864, 2918,
@@ -13,6 +14,8 @@ def parse_option():
                         help='task (Classifier/Cox)')
     parser.add_argument('--cancer_group', type=str, default='SM',
                         help='cancer group (SM/NGT/MSE/CCPRC/HC/GG/DS/LC)')
+    parser.add_argument('--num_threads', type=int, default=4,
+                        help='number of threads')
 
     opt = parser.parse_args()
 
@@ -121,7 +124,7 @@ def main():
     cancer_get = opt_get.cancer_group
 
     # specify the number of threads to use
-    num_threads = 4
+    num_threads = opt_get.num_threads
 
     # divide the seeds into two equal parts for each device
     seeds_per_device = 20
