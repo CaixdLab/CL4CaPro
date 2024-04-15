@@ -86,7 +86,7 @@ The expression data, containing 22,268 features and 947 samples from the study b
 
 Upon downloading the Affymetrix data, gene identification data can be produced by aligning the Affymetrix data using the GPL96 platform, available at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL96. Subsequently, features relevant to Oncotype DX can be isolated from the gene identification dataset, enabling the performance of validation experiments. Detailed procedures for these validation experiments are documented at [OncotypeDX](https://github.com/CaixdLab/CL4CaPro/blob/main/OncotypeDX.ipynb). And all required files in the notebook are located at [OncotypeDX folder](https://github.com/CaixdLab/CL4CaPro/tree/main/OncotypeDX) and [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35).
 
-## Usage of Individual Scripts
+## Usage of individual scripts
 
 ###  *main_CLCP.py*
 Train supervised CL models
