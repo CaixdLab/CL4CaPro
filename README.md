@@ -68,9 +68,8 @@ If the information of progression free interval (PFI) of each patient in the RNA
 ## Replicate the results in the paper
 
 ### Models trained with TCGA data
-The results for the CL-based classifiers in Figures 2-3 in the paper and for the CLCox models in Figure 4,  Extended Figures 1 and 4, and in Extended Tables 1 and 2 can be replicated as follows.   
+The AUCs and ROCs for the CL-based classifiers in Figures 2-3 in the paper, c-indexes and IBSs for the CLCox models in Figure 4,  Extended Figures 1 and 4, and in Extended Tables 1 and 2 can be replicated using the notebook [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb). The notebook uses TCGA data to implement the entire pipeline for training and testing CL-based clasifiers and CLCox models. See the comments in the notebook for the procudure of training and testing models.    
 
-To replicate our validation results on the TCGA dataset, users can specify a single cancer type or a group of cancer types in the *Build Data for given cancer* section of [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb) notebook to train a personalized model using either a specific seed or a series of seeds. Following training, the model along with the contrastive learning features it generates will be automatically saved to your local directory. Subsequently, the performance metrics of the classifier, such as prediction accuracy, receiver operating characteristic (ROC) curve, and area under the ROC curve (AUC), can be determined using [*Classifier_method.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/Classifier_method.py). Additionally, the performance metrics for Cox models, including the concordance index (c-index) and integrated Brier score (IBS), can be assessed using [*Cox_method.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/Cox_methods.py).
 
 ### Validation with CPTAC-3 & DKFZ datasets
 
