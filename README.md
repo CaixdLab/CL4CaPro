@@ -20,7 +20,7 @@ conda env create -f environment_L.yml (For Linux OS, we tested on Ubuntu 22.04.2
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
-Download datasets
+Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA datasetsa </li>
   <li>CPTAC-3 dataset </li>
@@ -28,7 +28,7 @@ Download datasets
   <li>Breast cancer microarray and clinical datasets <li>
 </ul>
 
-Download CL-based classifiers and CLCox models
+
 
    
 
