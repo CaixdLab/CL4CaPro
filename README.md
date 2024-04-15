@@ -33,7 +33,7 @@ CPTAC-3 RNA-seq and clinical data  can be downloaded from [GDC data portal](http
 DKFZ RNA-seq and cinical data can be downloaded from [cBioPortal](https://www.cbioportal.org/). They were used to validate prostate cancer models trained with TCGA data.  </li>
   <li>Breast cancer dataset
   
-  The breast cancer dataset contain microarray and clinical data of five datasets processed by the authours of the following paper:  
+  The breast cancer dataset contains microarray and clinical data of five datasets processed by the authours of the following paper:  
 
 Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kristensen, V. N., ... & Børresen-Dale, A. L. (2014). Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status. BMC cancer, 14, 1-12.
 
