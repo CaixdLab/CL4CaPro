@@ -20,11 +20,11 @@ conda env create -f environment_L.yml (For Linux OS, we tested on Ubuntu 22.04.2
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
-Download datasets and models
+### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA datasets
     
-Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. </li>
+Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. 
   <li>CPTAC-3 dataset
     
   Download CPTAC-3 RNA-seq and clinical datasets from [GDC data portal](https://portal.gdc.cancer.gov/projects/CPTAC-3).  CPTAC-3 datasets were used to validate the lung cancer models trained with TCGA data. </li>
