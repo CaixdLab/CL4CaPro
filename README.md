@@ -40,8 +40,7 @@ Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kriste
 The dataset can be downloaded from a [site](https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb) provided by the first authour of the paper or our [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f).<li>
   <li> CL-based Classifiers and CLCox models 
     
-  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35).  The file for each model is about 1GB. 
-  <li>
+  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35).  The file for each model is about 1GB.
 </ul>
 
 
