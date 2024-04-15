@@ -23,9 +23,11 @@ conda activate CL4CaPro_L/CL4CaPro_W
 Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA datasetsa </li>
+  Download TCGA RNA-seq dataset EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and clinical dataset TCGA-CDR-SupplementalTableS1.xlsx from the GDC website https://gdc.cancer.gov/about-data/publications/pancanatlas or from our OneDrive folder TCGAdata (https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models/TCGA?csf=1&web=1&e=IZYpyp)
   <li>CPTAC-3 dataset </li>
   <li>DKFZ prostate dataset </li>
   <li>Breast cancer microarray and clinical datasets <li>
+  <li> CL-based Classifiers and CLCox models <li>
 </ul>
 
 
