@@ -24,14 +24,21 @@ Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA datasets
     
-Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models/TCGA?csf=1&web=1&e=IZYpyp). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. </li>
+Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. </li>
   <li>CPTAC-3 dataset
     
   Download CPTAC-3 RNA-seq and clinical datasets from [GDC data portal](https://portal.gdc.cancer.gov/projects/CPTAC-3).  CPTAC-3 datasets were used to validate the lung cancer models trained with TCGA data. </li>
   <li>DKFZ prostate dataset 
   
   Download DKFZ RNA-seq and cinical datasets from [cBioPortal](https://www.cbioportal.org/). DKFZ datasets were used to validate prostate cancer models trained with TCGA data.  </li>
-  <li>Breast cancer microarray and clinical datasets <li>
+  <li>Breast cancer microarray and clinical datasets 
+  
+  The breast cancer datasets contain five microarray datasets processed by the authours of the following paper:  
+
+Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kristensen, V. N., ... & Børresen-Dale, A. L. (2014). Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status. BMC cancer, 14, 1-12.
+
+The datasets can be downloaded from  [Zhao](https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb) or our [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f)
+  <li>
   <li> CL-based Classifiers and CLCox models <li>
 </ul>
 
