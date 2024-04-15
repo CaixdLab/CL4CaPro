@@ -19,16 +19,19 @@ conda env create -f environment_L.yml (For Linux OS, we tested on Ubuntu 22.04.2
 
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
-
-# Download datasets
-1. TCGA datasets
-
-2. CPTAC-3 dataset
-
-3. DKFZ prostate dataset
-
-4. Breast cancer microarray and clinical datasets
 ```
+Download datasets
+<ul style="list-style-type:disc">
+  <li>TCGA datasetsa </li>
+  <li>CPTAC-3 dataset </li>
+  <li>DKFZ prostate dataset </li>
+  <li>Breast cancer microarray and clinical datasets <li>
+</ul>
+
+Download CL-based classifiers and CLCox models
+
+   
+
 ### Train and test CL-based classifiers or Cox models
 As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
 
