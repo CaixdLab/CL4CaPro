@@ -24,13 +24,13 @@ Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA datasets
     
-  Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models/TCGA?csf=1&web=1&e=IZYpyp). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. </li>
-  <li>CPTAC-3 dataset </li>
+Download TCGA RNA-seq dataset  from the [GDC website](https://gdc.cancer.gov/about-data/publications/pancanatlas) or from our OneDrive folder [TCGAdata](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models/TCGA?csf=1&web=1&e=IZYpyp). The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. </li>
+  <li>CPTAC-3 dataset
+    
+  Download CPTAC-3 RNA-seq and clinical datasets from [GDC data portal](https://portal.gdc.cancer.gov/projects/CPTAC-3).  </li>
+  <li>DKFZ prostate dataset 
   
-  Download CPTAC-3 RNA-seq and clinical datasets from [GDC data portal](https://portal.gdc.cancer.gov/projects/CPTAC-3). 
-  <li>DKFZ prostate dataset </li>
-  
-  Download DKFZ RNA-seq and cinical datasets from [cBioPortal](https://www.cbioportal.org/).
+  Download DKFZ RNA-seq and cinical datasets from [cBioPortal](https://www.cbioportal.org/).</li>
   <li>Breast cancer microarray and clinical datasets <li>
   <li> CL-based Classifiers and CLCox models <li>
 </ul>
