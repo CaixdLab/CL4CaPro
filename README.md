@@ -19,6 +19,13 @@ conda env create -f environment_L.yml (For Linux OS, we tested on Ubuntu 22.04.2
 
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
+
+# Download datasets
+<ul style="list-style-type:disc">
+  <li>Load TCGA data</li>
+  <li>Train a CL model by calling the script Auto_Train_GPU.py, which in turn calls main_CLCP.py for training the CL model and GenerateFeatures.py for extracting features from the CL model. </li>
+  <li>Train and test a XGBoost classifier by calling Classifier_method.py or a Cox model by calling Cox_methods.py</li>
+</ul>
 ```
 ### Train and test CL-based classifiers or Cox models
 As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
