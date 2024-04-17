@@ -72,18 +72,13 @@ If the information of progression free interval (PFI) of each patient in the RNA
 ## Replicate the results in the paper
 
 ### Models trained with TCGA data
-The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-indexes and IBSs of the CLCox models in Figure 4,  Extended Figures 1 and 4, and Extended Tables 1 and 2 can be replicated using the notebook [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb). The notebook uses TCGA data to implement the entire pipeline for training and testing CL-based clasifiers and CLCox models. See the comments in the notebook for the procudure of training and testing models.    
+The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-indexes and IBSs of the CLCox models in Figure 4,  Extended Figures 1 and 4, and Extended Tables 1 and 2 can be replicated using the notebook [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb). The notebook uses TCGA data to implement the entire pipeline for training and testing CL-based clasifiers and CLCox models. See the comments in the notebook for the procedure of training and testing models.    
 
 
 ### Validation with CPTAC-3 & DKFZ datasets
-Place CPTAC-3 and DKFZ datasets in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook CPTAC3&DKFZ.ipynb 
+Place CPTAC-3 and DKFZ datasets in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook CPTAC3&DKFZ.ipynb, follow the comments there to set proper values of two variables  Task  and Cancer, and then run the code. The notebook uses the TCGA models in the folder CL4CaPro_Models. Since one model is saved for each type of cancer, the validation result for that model will be produced.   In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb. 
 
-The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
 
-The mapped CPTAC-3 and DKFZ datasets are available at [CPTAC-3&DKFZ folder](https://github.com/CaixdLab/CL4CaPro/tree/main/CPTAC-3%26DKFZ) based on our supply mapping table [gene_dict_sample.csv](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC-3/gene_dict_sample.csv). 
-If you're interested in mapping the CPTAC-3 or DKFZ dataset independently, you can proceed with the steps outlined below: 1) The gene mapping dictionary can be created using the [*CPTAC3_mapping_gen.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_mapping_gen.py) script. 2) It may be necessary to manually verify certain mismatches between official symbol IDs and geneIDs due to updates in versions over recent decades. 3) Once the mapping ID dictionary is finalized, the [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) script can be utilized to produce the CPTAC-3 dataset. 
-
-The mapped dataset is then applied to validate models trained on TCGA data. Subsequently, the [*CPTAC3&DKFZ.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3%26DKFZ.ipynb) notebook can generate CPTAC-3 features using TCGA-trained CL models to assess the performance of CPTAC-3 and DKFZ validation.
 
 ### Comparison of Cox models with 16 Oncotype DX genes and all 13,235 genes in a microarray dataset
 
