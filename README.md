@@ -6,7 +6,7 @@ This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all sou
 
 ### Installation
 
-Install our code and necessary Pyton modules on your system using the following scirpt. You may also need to install additional dependencies if not already present. 
+Install our code and necessary Pyton modules on your system using the following script. You may also need to install additional dependencies if not already present. 
 ```bash
 # Clone the repository (if applicable)
 git clone https://github.com/CaixdLab/CL4CaPro
