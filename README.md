@@ -7,7 +7,6 @@ This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all sou
 ### Installation
 
 Install our code and necessary Pyton modules on your system using the following scirpt. You may also need to install additional dependencies if not already present. 
-
 ```bash
 # Clone the repository (if applicable)
 git clone https://github.com/CaixdLab/CL4CaPro
@@ -20,6 +19,13 @@ conda env create -f environment_L.yml (For Linux OS, we tested on Ubuntu 22.04.2
 # Activate corresponding conda env
 conda activate CL4CaPro_L/CL4CaPro_W
 ```
+The system requirements are as follows:
+<ul style="list-style-type:disc">
+  <li>TCGA dataset</li>
+   <li>TCGA dataset</li>
+   <li>TCGA dataset</li>
+</ul>
+
 ### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA dataset<br />
