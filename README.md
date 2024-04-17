@@ -76,7 +76,7 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 
 
 ### Validation with CPTAC-3 & DKFZ datasets
-Place CPTAC-3 and DKFZ datasets in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook CPTAC3&DKFZ.ipynb, follow the comments there to set proper values of two variables  Task  and Cancer, and then run the code. The notebook uses the TCGA models in the folder CL4CaPro_Models. Since one model is saved for each type of cancer, the validation result for that model will be produced.   In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb with the 40 default random seeds already in the code. 
+Place CPTAC-3 and DKFZ datasets in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook CPTAC3&DKFZ.ipynb, follow the comments there to set proper values of two variables  Task  and Cancer, and then run the code. The notebook uses the TCGA models in the folder CL4CaPro_Models. Since one model is saved for each type of cancer, the validation result for that model will be produced.   In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb with 40 default random seeds already in the code. 
 
 
 
