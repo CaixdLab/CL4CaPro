@@ -76,6 +76,7 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 
 
 ### Validation with CPTAC-3 & DKFZ datasets
+Place CPTAC-3 and DKFZ datasets in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook CPTAC3&DKFZ.ipynb 
 
 The dataset is in the GDC data portal: https://portal.gdc.cancer.gov/projects. In the Search-Projects search box at the upper left corner, type in cptac. Then both clinical data and gene expression data can be downloaded.
 
