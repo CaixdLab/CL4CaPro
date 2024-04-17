@@ -23,23 +23,21 @@ conda activate CL4CaPro_L/CL4CaPro_W
 ### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA dataset<br />
-The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. 
+The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. </li>
   
   <li>CPTAC-3 dataset <br />
 CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>.  They were used to validate the lung cancer models trained with TCGA data. </li>
-  <li>DKFZ prostate dataset 
-  
-DKFZ RNA-seq and cinical data can be downloaded from [cBioPortal](https://www.cbioportal.org/). They were used to validate prostate cancer models trained with TCGA data.  </li>
-  <li>Breast cancer dataset
-  
-  The breast cancer dataset contains microarray and clinical data of five datasets processed by the authours of the following paper:  
 
-Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kristensen, V. N., ... & Børresen-Dale, A. L. (2014). Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status. BMC cancer, 14, 1-12.
+  <li>DKFZ prostate dataset <br /> 
+DKFZ RNA-seq and cinical data can be downloaded from <a href="https://www.cbioportal.org">cBioPortal</a>. They were used to validate prostate cancer models trained with TCGA data.  </li>
 
-The dataset can be downloaded from a [site](https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb) provided by the first authour of the paper or our [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f).
-  <li> CL-based Classifiers and CLCox models 
-    
-  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35).  The file for each model is about 1GB.
+  <li>Breast cancer dataset <br />
+  The breast cancer dataset contains microarray and clinical data of five datasets processed by the authours of the following paper:  <br />
+Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kristensen, V. N., ... & Børresen-Dale, A. L. (2014). Systematic assessment of prognostic gene signatures for breast cancer shows distinct influence of time and ER status. BMC cancer, 14, 1-12.<br />
+The dataset can be downloaded from a <a href ="https://filetransfer.abbvie.com/w/f-0572ba21-9252-48e3-b8ac-ad36ab1c4feb">site</a>) provided by the first authour of the paper or our <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">OneDrive</a>). </li>
+
+  <li> CL-based Classifiers and CLCox models  <br />
+  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35">OneDrive</a>.  The file for each model is about 1GB.</li>
 </ul>
 
 
