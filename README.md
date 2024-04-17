@@ -23,10 +23,10 @@ conda activate CL4CaPro_L/CL4CaPro_W
 ### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA dataset<br />
-The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website<a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. 
-  <li>CPTAC-3 dataset
-    
-CPTAC-3 RNA-seq and clinical data  can be downloaded from [GDC data portal](https://portal.gdc.cancer.gov/projects/CPTAC-3).  They were used to validate the lung cancer models trained with TCGA data. </li>
+The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. 
+  
+  <li>CPTAC-3 dataset <br />
+CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href-"https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>.  They were used to validate the lung cancer models trained with TCGA data. </li>
   <li>DKFZ prostate dataset 
   
 DKFZ RNA-seq and cinical data can be downloaded from [cBioPortal](https://www.cbioportal.org/). They were used to validate prostate cancer models trained with TCGA data.  </li>
