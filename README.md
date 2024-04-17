@@ -21,9 +21,9 @@ conda activate CL4CaPro_L/CL4CaPro_W
 ```
 The system requirements are as follows:
 <ul style="list-style-type:disc">
-  <li>TCGA dataset</li>
-   <li>TCGA dataset</li>
-   <li>TCGA dataset</li>
+  <li>Python 3.8 and later</li>
+   <li>CUDA 11.3 and later</li>
+   <li>PyTorch 2.0 and later for the Linux version and Pytorch 1.11 and later for the Windows version</li>
 </ul>
 
 ### Download datasets and models
