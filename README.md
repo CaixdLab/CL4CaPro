@@ -30,13 +30,13 @@ We trained models on two RTX 4090/16GB GPU cards with 8 threads. To optimize the
 ### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA dataset<br />
-The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. TCGA datasets were used to train and test our models. </li>
+The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv,  and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. Both files should be placed in the folder CL4CAPro.  TCGA datasets were used to train and test our models. </li>
   
   <li>CPTAC-3 dataset <br />
-CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>.  They were used to validate the lung cancer models trained with TCGA data. </li>
+CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>, and data files should be placed in the folder CL4CAPro/CPTAC3&DKFZ.  They were used to validate the lung cancer models trained with TCGA data. </li>
 
   <li>DKFZ prostate dataset <br /> 
-DKFZ RNA-seq and cinical data can be downloaded from <a href="https://www.cbioportal.org">cBioPortal</a>. They were used to validate prostate cancer models trained with TCGA data.  </li>
+DKFZ RNA-seq and cinical data can be downloaded from <a href="https://www.cbioportal.org">cBioPortal</a>, and data files should be placed in the folder CL4CAPro/CPTAC3&DKFZ. They were used to validate prostate cancer models trained with TCGA data.  </li>
 
   <li>Breast cancer dataset <br />
   The breast cancer dataset contains microarray and clinical data of five datasets processed by the authours of the following paper:  <br />
