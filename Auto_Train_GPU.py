@@ -129,9 +129,6 @@ def main():
     # divide the seeds into two equal parts for each device
     seeds_per_device = 20
 
-    # create a list of thread objects
-    threads = []
-
     # create threads for device 0
     with concurrent.futures.ProcessPoolExecutor(num_threads) as executor:
         for i in range(5):
@@ -142,7 +139,7 @@ def main():
             for result in executor.map(run_training, seed_list[start:end], [0] * num_threads, [cancer_get] * num_threads, [task_get] * num_threads):
                 print(result)
 
-
+    # create threads for device 1
     with concurrent.futures.ProcessPoolExecutor(num_threads) as executor:
         for i in range(5):
             start = i * num_threads + seeds_per_device

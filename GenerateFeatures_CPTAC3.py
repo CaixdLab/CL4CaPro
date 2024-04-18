@@ -118,9 +118,9 @@ def main():
     torch.cuda.set_device(opt_get.gpu_device)
 
     if opt_get.task == 'WholeTimeSeq':
-        TotalCancerDataPath = './CPTAC3_DataSet/CancerRNA_CPTAC3_' + opt_get.cancer_group + '_' + opt_get.task + '_3.txt'
+        TotalCancerDataPath = './CPTAC3&DKFZ/CancerRNA_CPTAC3_' + opt_get.cancer_group + '_' + opt_get.task + '_3.txt'
     else:
-        TotalCancerDataPath = './CPTAC3_DataSet/CancerRNA_CPTAC3_' + opt_get.cancer_group + '_' + opt_get.task + '_2.txt'
+        TotalCancerDataPath = './CPTAC3&DKFZ/CancerRNA_CPTAC3_' + opt_get.cancer_group + '_' + opt_get.task + '_2.txt'
     data_get = pd.read_csv(TotalCancerDataPath)
     X_get = data_get.iloc[:, 6:].values.tolist()
     #Y_get = data_get.iloc[:, 4].values.tolist()
