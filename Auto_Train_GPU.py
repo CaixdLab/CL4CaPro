@@ -21,7 +21,7 @@ def parse_option():
 
     return opt
 
-def run_training(get_seed, device, cancer_group, task):
+def run_training(get_seed, device, cancer_group, task_get):
     # Fine-Tune 2 + 1 layers
     dim_1_list = [5196]
     dim_2_list = [2048]
@@ -32,6 +32,10 @@ def run_training(get_seed, device, cancer_group, task):
     round_num = 1
     #cancer_group = 'BRCA'
     #task = 'Risk' # use 'Risk" to train a classifier, use 'WholeTimeSeq' to train Cox models
+    if task_get == 'Classifier':
+        task = 'Risk'
+    else:
+        task = 'WholeTimeSeq'
 
     if cancer_group == 'SM' or cancer_group == 'BLCA' or cancer_group == 'CESC' or cancer_group == 'HNSC' or cancer_group == 'LUSC':
         input_dim = 16008
