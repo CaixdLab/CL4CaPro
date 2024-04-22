@@ -3,7 +3,7 @@ import pandas as pd
 from tqdm import tqdm
 pd.options.mode.chained_assignment = None
 
-df_new_sample = pd.read_csv('CPTAC3/gene_dict_sample_new.csv')
+df_new_sample = pd.read_csv('CPTAC-3&DKFZ/gene_dict_sample_new.csv')
 geneid_dict = df_new_sample.set_index('GeneID')['ReplacementGeneID'].to_dict()
 symbol_dict = df_new_sample.set_index('GeneID')['OfficialSymbol'].to_dict()
 def remove_none_values(dictionary):
@@ -26,17 +26,17 @@ def get_value_from_dict(dictionary, key):
 new_geneid_dict = remove_none_values_gene(geneid_dict)
 new_symbol_dict = remove_none_values(symbol_dict)
 
-CPTAC3_GeneExp_pth = 'CPTAC3\GeneExp'
-CPTAC3_GeneExp_save_pth = 'CPTAC3\MatchedGeneExp'
+CPTAC3_GeneExp_pth = 'CPTAC-3&DKFZ\GeneExp'
+CPTAC3_GeneExp_save_pth = 'CPTAC-3&DKFZ\MatchedGeneExp'
 files = os.listdir(CPTAC3_GeneExp_pth)
 
 # Read the mapping DataFrame from CSV
-mapping_df = pd.read_csv('CPTAC3/gene_dict_symbol_new.csv')
+mapping_df = pd.read_csv('CPTAC-3&DKFZ/gene_dict_symbol_new.csv')
 
 # Create a dictionary mapping from the mapping DataFrame using '_id' as the key and 'MappedValue' as the value
 mapping_dict = mapping_df.set_index('query')['_id'].to_dict()
 
-header_df = pd.read_csv('CPTAC3/gen_header.csv')
+header_df = pd.read_csv('CPTAC-3&DKFZ/gen_header.csv')
 gen_header_get = header_df.values.tolist()
 df_convert = pd.DataFrame(columns=gen_header_get)
 match_record = []
