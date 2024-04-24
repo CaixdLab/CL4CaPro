@@ -77,7 +77,7 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 
 ### Validation with CPTAC-3 & DKFZ datasets
 
-#### Preprocessing and Generating dataset files
+#### Preprocessing and generating dataset files
 The notebook [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb), [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb), [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb), and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb) are available for user to preparing and generating CPTAC-3 and DKFZ datasets from the original downloaded files.
 
 #### Run Validation
