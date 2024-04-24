@@ -45,7 +45,7 @@ def run_training(get_seed, device):
     if validation == 'Affy':
         input_dim = 13235
 
-    split_class_num = 9
+    split_class_num = 12
     l2_list = [0.001, 0.0007, 0.0003]
     learning_rate_list = [0.00002]
 
