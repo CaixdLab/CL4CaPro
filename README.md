@@ -48,9 +48,6 @@ The dataset can be downloaded from a <a href ="https://www.dropbox.com/scl/fi/f1
 </ul>
 
 
-
-   
-
 ### Train and test CL-based classifiers or Cox models
 As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
 
@@ -79,7 +76,7 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 ### Validation with CPTAC-3 & DKFZ datasets
 As described in the paper, we used CPTAC-3 lung cancer data and DKFZ prostate cancer data to validate the classifiers and Cox models trained with TCGA lUAD, LUSC, and PRAD data. The validation results in Figure 5 of the paper can be replicated as follows. 
 
-#### Preprocess the original CPTAC-3 and DKFZ datasets
+#### Process the original CPTAC-3 and DKFZ datasets
 
 Preprocess CPTAC3 and DKFZ datasets using notebooks [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb) and [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb).  Data preprocessing includes the following three main steps:
 <ul style="list-style-type:disc">
@@ -88,9 +85,10 @@ Preprocess CPTAC3 and DKFZ datasets using notebooks [*CPTAC3_Preprocessing.ipynb
   <li>Convert gene IDs/symbols used in CPTAC-3 and DKFZ datasets to those used by in the TCGA TCGA data and update the data files.</li>
 </ul>
 
-Generate CPTAC3 and DKFZ datasets using notebooks [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb) and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb). Data generation includes the following three main steps:
+Generate CPTAC3 and DKFZ datasets using notebooks [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb) and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb). Data generation includes the following four main steps:
 <ul style="list-style-type:disc">
   <li>Extract data of desired patients from the comprehensive file produced by the preprocessing notebook. Particularly, CPTAC-3 dataset contains data of several types of cancer and we need to extract data of LUAD and LUSC.  </li>
+  <li>Convert FPKM gene expression values in CPTAC-3 and DKFZ data to read counts per gene in the TCGA dataset.</li>
   <li>Normalize gene expression values using the expression values of housekeeper genes.</li>
   <li>Create a data file for each type of cancer, which will be used to validate the models trained with TCGA data.</li>
 </ul>
