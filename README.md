@@ -25,7 +25,7 @@ The system requirements are as follows:
    <li>CUDA 11.3 and later</li>
    <li>PyTorch 2.0 and later for the Linux version and Pytorch 1.11 and later for the Windows version</li>
 </ul>
-We trained models on two RTX 4090 24GB GPU cards with 8 threads. To optimize the speed, the number of threads may need to be adjusted according to the GPUs.  
+We trained models on two RTX 4090 24GB GPU cards with 8 threads. To optimize the speed, the number of threads in scripts Auto_Train_GPU.py and Auto_Train_AffyOnco_GPU.py may be adjusted according to the GPUs.  
 
 ### Download datasets and models
 <ul style="list-style-type:disc">
