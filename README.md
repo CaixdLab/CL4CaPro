@@ -44,7 +44,7 @@ Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kriste
 The dataset can be downloaded from a <a href ="https://www.dropbox.com/scl/fi/f19cymyk5m9li9esnprpb/Affy947.RDS?rlkey=crwv3hpe2a7jwiku2ww3nl81b&dl=0">site</a> provided by the first authour of the paper or our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">OncotypeDX</a>. All files should be placed in the folder  CL4CAPro/OncotypeDX.  </li>
 
   <li> CL-based Classifiers and CLCox models  <br />
-  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CaPro_Models</a>. The folder CL4CaPro_Models including the two subfolders should be placed in the folder   CL4CAPro.   The file for each model is about 1GB.</li>
+  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available in our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CaPro_Models</a>. The folder CL4CaPro_Models including the two subfolders should be placed in the folder   CL4CAPro.   The file for each model is about 1GB.</li>
 </ul>
 
 
