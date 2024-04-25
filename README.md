@@ -93,10 +93,10 @@ Generate CPTAC3 and DKFZ datasets using notebooks [*GenerateCPTAC3_Dataset.ipynb
   <li>Create a data file for each type of cancer, which will be used to validate the models trained with TCGA data.</li>
 </ul>
 
-Of note, the data files generated from the original CPTAC-3 and DKFZ datasets by notebooks GenerateCPTAC3_Dataset.ipynb and GenerateDKFZ_Dataset.ipynb are already in the Box folder [CPTAC-3&DKFZ](https://miami.app.box.com/folder/260012313407).  
+Of note, the data files generated from the original CPTAC-3 and DKFZ datasets by notebooks GenerateCPTAC3_Dataset.ipynb and GenerateDKFZ_Dataset.ipynb are already in the Box folder [CPTAC-3&DKFZ](https://miami.box.com/s/9tv3nycil3y37hit3p1y3mv9ihpf35sj).  
 
 #### Run Validation
-In the Jupyter notebook [CPTAC3&DKFZ.ipynb](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3%26DKFZ.ipynb), follow the comments there to set proper values of two variables Task and Cancer, and then run the code. The notebook uses the TCGA models in the folder Box folder [CL4CaPro_Models](https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca). Since one model is saved for each type of cancer, the validation result for that model will be produced. In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb with 40 default random seeds already in the code. 
+In the Jupyter notebook [CPTAC3&DKFZ.ipynb](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3%26DKFZ.ipynb), follow the comments there to set proper values of two variables Task and Cancer, and then run the code. The notebook uses the TCGA models in the folder Box folder [CL4CaPro_Models](https://miami.box.com/s/zv6ddlrobdb79zla3wtn8rmknsjl4eby). Since one model is saved for each type of cancer, the validation result for that model will be produced. In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb with 40 default random seeds already in the code. 
 
 
 
