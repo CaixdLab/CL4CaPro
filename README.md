@@ -1,7 +1,7 @@
 # Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
 
 ## Overview of the computational pipeline
-This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all source codes for training and testing the contrastive learning (CL) models for predicting cancer prognosis using gene expression values developed in the paper cited at the end of this document. The models trained with the RNAs-seq and clinical data from The Cancer Genome Atlas (TCGA) are available on [OneDrive](https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro/CL4CaPro_Models?csf=1&web=1&e=mT3Z35), and codes for using these models are available in both this codebase and OneDrive. This codebase also includes the codes for validating the models trained with TCGA lung cancer and prostate cancer using two independent datasets: CPTAC-3 lung cancer dataset and DKFZ prostate cancer dataset. Moreover, this codebase contains the codes for training and tesing prognositic models using the 21 genes of Oncotype DX and all genes in a microarray dataset, as described in the paper. 
+This codebase on [GitHub](https://github.com/CaixdLab/CL4CaPro) contains all source codes for training and testing the contrastive learning (CL) models for predicting cancer prognosis using gene expression values developed in the paper cited at the end of this document. The models trained with the RNAs-seq and clinical data from The Cancer Genome Atlas (TCGA) are available on [Box](https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca), and codes for using these models are available in this codebase. This codebase also includes the codes for validating the models trained with TCGA lung cancer and prostate cancer using two independent datasets: CPTAC-3 lung cancer dataset and DKFZ prostate cancer dataset. Moreover, this codebase contains the codes for training and tesing prognositic models using the 21 genes of Oncotype DX and all genes in a microarray dataset, as described in the paper. 
 
 
 ### Installation
@@ -25,12 +25,12 @@ The system requirements are as follows:
    <li>CUDA 11.3 and later</li>
    <li>PyTorch 2.0 and later for the Linux version and Pytorch 1.11 and later for the Windows version</li>
 </ul>
-We trained models on two RTX 4090 24GB GPU cards with 8 threads. To optimize the speed, the number of threads may need to be adjusted according to the GPUs.  
+We trained models on two RTX 4090 24GB GPU cards with 8 threads. To optimize the speed, the number of threads in scripts Auto_Train_GPU.py and Auto_Train_AffyOnco_GPU.py may be adjusted according to the GPUs.  
 
 ### Download datasets and models
 <ul style="list-style-type:disc">
   <li>TCGA dataset<br />
-The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our OneDrive folder <a href="https://miamiedu-my.sharepoint.com/:f:/r/personal/x_cai_miami_edu/Documents/CaixdLab/CL4CaPro?csf=1&web=1&e=OGT77f">TCGAdata<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv,  and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. Both files should be placed in the folder CL4CAPro.  TCGA datasets were used to train and test our models. </li>
+The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">TCGA data<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv,  and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. Both files should be placed in the folder CL4CAPro.  TCGA datasets were used to train and test our models. </li>
   
   <li>CPTAC-3 dataset <br />
 CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>, and data files should be placed in the folder CL4CAPro/CPTAC-3&DKFZ.  They were used to validate the lung cancer models trained with TCGA data. </li>
