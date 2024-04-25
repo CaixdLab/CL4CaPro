@@ -70,7 +70,7 @@ If the information of progression free interval (PFI) of each patient in the RNA
 ## Replicate the results in the paper
 
 ### Models trained with TCGA data
-The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-indexes and IBSs of the CLCox models in Figure 4,  Extended Figures 1 and 4, and Extended Tables 1 and 2 can be replicated using the notebook [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb). The notebook uses TCGA data to implement the entire pipeline for training and testing CL-based clasifiers and CLCox models. See the comments in the notebook for the procedure of training and testing models.    
+The AUCs and ROCs of the CL-based classifiers in Figures 2-3 of the paper, c-indexes and IBSs of the CLCox models in Figure 4,  Extended Figures 1 and 4, and Extended Tables 1 and 2 can be replicated using the notebook [*TrainCL4CaPro.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/TrainCL4CaPro.ipynb). The notebook uses TCGA data to implement the entire pipeline for training and testing CL-based clasifiers and CLCox models. See the comments in the notebook for the procedure of training and testing models.    
 
 
 ### Validation with CPTAC-3 & DKFZ datasets
