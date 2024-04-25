@@ -74,7 +74,7 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 
 
 ### Validation with CPTAC-3 & DKFZ datasets
-As described in the paper, we used CPTAC-3 lung cancer data and DKFZ prostate cancer data to validate the classifiers and Cox models trained with TCGA lUAD, LUSC, and PRAD data. The validation results in Figure 5 of the paper can be replicated as follows. 
+As described in the paper, we used CPTAC-3 lung cancer data and DKFZ prostate cancer data to validate the classifiers and Cox models trained with TCGA lUAD, LUSC, and PRAD data. Place CPTAC-3 and DKFZ dataset files in the folder CL4CAPro/CPTAC-3&DKFZ, and follow the following steps to replicate the validation results in Figure 5 of the paper. 
 
 #### Process the original CPTAC-3 and DKFZ datasets
 
