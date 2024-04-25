@@ -101,8 +101,8 @@ In the Jupyter notebook [CPTAC3&DKFZ.ipynb](https://github.com/CaixdLab/CL4CaPro
 
 
 ### Comparison of Cox models with 16 Oncotype DX genes and all 13,235 genes in a breast cancer microarray dataset
-Download the breast cancer dataset from the [Box](https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca) and place all files in the folder 
-CL4CAPro/OncotypeDX, and then run notebook OncotypeDX.ipynb. This willl produce the box-plots of c-indexes in Figure 6 of the paper. 
+The breast cancer dataset and other necessary files in Box folder [OncotypeDX](https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca). Place the folder and its content in 
+the folder  CL4CAPro, and then run notebook OncotypeDX.ipynb. This willl produce the box-plots of c-indexes in Figure 6 of the paper. 
 
 
 
