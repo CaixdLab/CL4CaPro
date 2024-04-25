@@ -78,7 +78,21 @@ The AUCs and ROCs of the CL-based classifiers in Figures 2-3 in the paper, c-ind
 ### Validation with CPTAC-3 & DKFZ datasets
 
 #### Preprocessing and generating dataset files
-The notebook [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb), [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb), [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb), and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb) are available for user to preparing and generating CPTAC-3 and DKFZ datasets from the original downloaded files.
+The notebook [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb), [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb), [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb), and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb) are available for user to preparing and generating CPTAC-3 and DKFZ datasets from the original downloaded files. They are working on the following tasks:
+
+CPTAC3 and DKFZ Preprocssing:
+<ul style="list-style-type:disc">
+  <li>Load Gene Expression data and clinical data from the original downloaded files.</li>
+  <li>Combine patients' Gene Expression data with their clinical records to create a comprehensive file.</li>
+  <li>Standardize the Gene IDs/Symbols used in CPTAC-3 and DKFZ to those used by TCGA, and update this in the comprehensive file.</li>
+</ul>
+
+Generate CPTAC3 and DKFZ dataset:
+<ul style="list-style-type:disc">
+  <li>Select the necessary cases from the preprocessed comprehensive file.</li>
+  <li>Normalize the data using housekeeper genes values.</li>
+  <li>Create a cancer level data file for validating the CL-based models trained from TCGA datasets.</li>
+</ul>
 
 #### Run Validation
 Place CPTAC-3 and DKFZ dataset files in the folder CL4CAPro/CPTAC-3&DKFZ. In the Jupyter notebook [CPTAC3&DKFZ.ipynb](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3%26DKFZ.ipynb), follow the comments there to set proper values of two variables Task and Cancer, and then run the code. The notebook uses the TCGA models in the folder CL4CaPro_Models. Since one model is saved for each type of cancer, the validation result for that model will be produced. In Figure 5 of the paper, validation results of 40 models of each type of cancer obtained from 40 random splits of the data are presented. To produce the validation results for 40 models, one needs to train 40 models using TrainCL4CaPro.ipynb with 40 default random seeds already in the code. 
