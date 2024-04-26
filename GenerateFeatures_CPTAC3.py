@@ -134,20 +134,6 @@ def main():
     opt = model_config()
     opt.model_in_dim = int(opt_get.model_in_dim)
     learning_rate_list = opt_get.learning_rate_list
-    if opt_get.cancer_group == opt_get.cancer_pooled:
-        if opt_get.task == 'WholeTimeSeq':
-            opt_get.model_save_path = '/home/anchen/Storage/CLCP_save/{}_model_save'.format(opt_get.cancer_group)
-        else:
-            opt_get.model_save_path = '/home/anchen/Storage/CLCP_save/{}_risk_model_save'.format(opt_get.cancer_group)
-        save_feat_pth = 'CPTAC3_Feature/{}_{}_{}_Features'.format(opt_get.cancer_group, opt_get.task, opt_get.seed)
-    else:
-        if opt_get.task == 'WholeTimeSeq':
-            opt_get.model_save_path = '/home/anchen/Storage/CLCP_save/{}_model_save'.format(opt_get.cancer_pooled)
-        else:
-            opt_get.model_save_path = '/home/anchen/Storage/CLCP_save/{}_risk_model_save'.format(opt_get.cancer_pooled)
-        save_feat_pth = 'CPTAC3_Feature/{}_{}_{}_{}_Features'.format(opt_get.cancer_group, opt_get.cancer_pooled, opt_get.task, opt_get.seed)
-    if not os.path.exists(save_feat_pth):
-        os.mkdir(save_feat_pth)
 
     # 2 + 1 model
     for i in range(len(dim_1_list)):
@@ -158,9 +144,7 @@ def main():
                     opt.model_out_dim = int(dim_2_list[j])
                     opt.feat_dim = int(dim_3_list[k])
                     get_model = CLCPnet(opt).cuda()
-                    model_path = '{}/CLCP_{}_{}_{}_feat_{}_lr_{}_l2_{}_cl_{}_seed_{}_round_{}_decay_0.0001_bsz_{}_temp_0.07/'.\
-                    format(opt_get.model_save_path, opt_get.model_in_dim, opt.model_n_hidden_1, opt.model_out_dim, opt.feat_dim, lr, opt_get.l2_rate, opt_get.split_class_num, seed, opt_get.round, batch_size)
-                    #try:
+                    model_path = opt_get.model_save_path
                     all_files = os.listdir(model_path)
                     pth_files = list(filter(lambda f: f.endswith('.pth'), all_files))
 
@@ -169,10 +153,6 @@ def main():
 
                     get_model.load_state_dict(state['model'])
                     new_model = torchvision.models._utils.IntermediateLayerGetter(get_model,{opt_get.layer_name: 'feat'})
-                    get_feat = gen_layer_feat(X_get, new_model)
-
-                    title = 'model_CLCP_{}_{}_{}_feat_{}_bsz_{}_lr_{}_l2_{}_cl_{}_seed_{}_round_{}'.\
-                        format(opt_get.model_in_dim, opt.model_n_hidden_1, opt.model_out_dim, opt.feat_dim, batch_size, lr, opt_get.l2_rate, opt_get.split_class_num, seed, opt_get.round)
 
                     merge_get = gen_layer_feat_withinfo(X_get, new_model, Info)
 
@@ -180,11 +160,9 @@ def main():
                     for item in range(len(merge_get[0]) - 6):
                         header.append('feature_' + str(item))
                     merge_info = pd.DataFrame(merge_get, columns = header)
-                    save_path = save_feat_pth + '/' + title + '_' + opt_get.layer_name + '.txt'
-                    print('Generated: ', title, len(get_feat[0]))
+                    save_path = 'Features/CPTAC3DKFZFeature_{}.txt'.format(opt_get.cancer_group)
+                    print('Generated: CPTAC3DKFZFeature_{}.txt'.format(opt_get.cancer_group))
                     merge_info.to_csv(save_path, index=False)
-                    #except:
-                    #    print('Cannot find', model_path)
 
 if __name__ == '__main__':
     main()

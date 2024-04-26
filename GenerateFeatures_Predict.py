@@ -119,11 +119,7 @@ def main():
 
     torch.cuda.set_device(opt_get.gpu_device)
 
-    if opt_get.cancer_group == 'BRCA' and opt_get.validation == 'Affy':
-        TotalCancerDataPath = 'Predict_AffyBRCAOncotypeDX_' + opt_get.task + '_' + str(
-            opt_get.split_class_num) + '_DMFS.txt'
-    else:
-        TotalCancerDataPath = 'Predict_input.txt'
+    TotalCancerDataPath = './Dataset/CancerRNA_Prediction_{}_{}_2.txt'.format(opt_get.cancer_group, opt_get.task)
     data_get = pd.read_csv(TotalCancerDataPath)
     X_get = data_get.iloc[:, 6:].values.tolist()
     #Y_get = data_get.iloc[:, 4].values.tolist()
@@ -160,7 +156,6 @@ def main():
 
                     get_model.load_state_dict(state['model'])
                     new_model = torchvision.models._utils.IntermediateLayerGetter(get_model,{opt_get.layer_name: 'feat'})
-                    get_feat = gen_layer_feat(X_get, new_model)
 
                     merge_get = gen_layer_feat_withinfo(X_get, new_model, Info)
 
