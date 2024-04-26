@@ -82,7 +82,7 @@ Preprocess CPTAC3 and DKFZ datasets using notebooks [*CPTAC3_Preprocessing.ipynb
 <ul style="list-style-type:disc">
   <li>Load RNA-seq and clinical data from the original data files.</li>
   <li>Combine patients' gene expression data with their clinical records to create a comprehensive file.</li>
-  <li>Convert gene IDs/symbols used in CPTAC-3 and DKFZ datasets to those used by in the TCGA TCGA data and update the data files.</li>
+  <li>Convert gene IDs/symbols used in CPTAC-3 and DKFZ datasets to those used by in the TCGA data and update the data files.</li>
 </ul>
 
 Generate CPTAC3 and DKFZ datasets using notebooks [*GenerateCPTAC3_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateCPTAC3_Dataset.ipynb) and [*GenerateDKFZ_Dataset.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/GenerateDKFZ_Dataset.ipynb). Data generation includes the following four main steps:
