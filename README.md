@@ -47,7 +47,6 @@ The dataset can be downloaded from a <a href ="https://www.dropbox.com/scl/fi/f1
   CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available in our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CaPro_Models</a>. The folder CL4CaPro_Models including the two subfolders should be placed in the folder   CL4CAPro.   The file for each model is about 1GB.</li>
 </ul>
 
-
 ### Train and test CL-based classifiers or Cox models
 As described in the paper, we used two approaches to predict the proganosis of a cancer patient. In the first approach, we trained a XGBoost classifer to categorize a cancer patient into either a low-risk group of recurrence or a high-risk group of recurrence. In the second approach, we trained a Cox proportional hazards model to predict the hazards ratio. In both approaches, we first trained a CL-module that learns feature representations from cancer transcriptomes and then trained a classifier or a Cox model using the learned features. 
 
@@ -59,7 +58,6 @@ As described in the paper, we used two approaches to predict the proganosis of a
 </ul>
 As described in the paper, the following three Cox models are trained: Cox-EN, Cox-XGB, and Cox-nnet, when Cox_methods.py is called.  To train the XGBoost classifer and the Cox-XGB model, the Python XGBoost module needs to be installed, which should have been done if the instllation script is run successfully. The Cox-nnet was downloaded from the following website https://github.com/xinformatics/coxnnet_py3/tree/master, and it should have been installed if the installation script is run successfully.
 
- 
 ### Use the trained models 
 
 As mentioned earlier, CL-XGBoost classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available at 
