@@ -176,22 +176,35 @@ def process_each_pth(item, path, seed, cancer_group, pooled, method = 'coxEN'):
         print(item, ' Generate: ', eachCancer)
 
         # Calculate the time points
-        upper = min(max(y_test['Survival_in_days']), max(y['Survival_in_days']))
-        bottom = max(min(y_test['Survival_in_days']), min(y['Survival_in_days']))
+        combined_time_test_list = list(zip(y_test['Status'], y_test['Survival_in_days']))
+        combined_time_train_list = list(zip(y['Status'], y['Survival_in_days']))
+        sorted_combined_time_test_list = sorted(combined_time_test_list, key=lambda x: x[1])
+        sorted_combined_time_train_list = sorted(combined_time_train_list, key=lambda x: x[1])
+        sorted_status_test, sorted_time_test = zip(*sorted_combined_time_test_list)
+        sorted_status_train, sorted_time_train = zip(*sorted_combined_time_train_list)
 
-        sorted_array = np.sort(y_test['Survival_in_days'])
+        last_true_index = -1
+        num_thre = 20
+        for index, status in reversed(list(enumerate(sorted_status_train))):
+            if status and index <= len(sorted_status_train) - (num_thre + 1):
+                last_true_index = index
+                break
+        sorted_time_train_end = sorted_time_train[last_true_index]
 
-        # For 90th percentile
-        index_end_point_90 = int(0.9 * len(sorted_array))
-        end_point_90 = sorted_array[index_end_point_90]
-        times_90 = np.arange(bottom + 1, end_point_90)
+        last_true_index = -1
+        num_thre = 20
+        for index, status in reversed(list(enumerate(sorted_status_test))):
+            if status and index <= len(sorted_status_test) - (num_thre + 1):
+                last_true_index = index
+                break
+        sorted_time_test_end = sorted_time_train[last_true_index]
 
-        # For 80th percentile
-        index_end_point_80 = int(0.8 * len(sorted_array))
-        end_point_80 = sorted_array[index_end_point_80]
-        times_80 = np.arange(bottom + 1, end_point_80)
-
-        print(str(seed), bottom, upper, index_end_point_90, index_end_point_80)
+        # sorted_time_test_end = sorted_time_test[int(0.8 * len(sorted_time_test))]
+        sorted_time_test_start = sorted_time_test[int(0 * len(sorted_time_test))]
+        # sorted_time_train_end = sorted_time_train[int(0.8 * len(sorted_time_train))]
+        sorted_time_train_start = sorted_time_train[int(0 * len(sorted_time_train))]
+        times = np.arange(max(sorted_time_test_start, sorted_time_train_start),
+                          min(sorted_time_test_end, sorted_time_train_end))
 
         if method == 'coxEN':
 
@@ -277,7 +290,7 @@ def process_each_pth(item, path, seed, cancer_group, pooled, method = 'coxEN'):
             c_index = round(scores[0], 10)
 
             baseline_model = BreslowEstimator().fit(train_preds, y['Status'], y['Survival_in_days'])
-            survs = baseline_model.get_survival_function(test_pred)
+            survs = baseline_model.get_survival_function(test_preds)
             preds = np.asarray([[fn(t) for t in times] for fn in survs])
             scores = integrated_brier_score(y, y_test, preds, times)
             ibs = round(scores[0], 6)
