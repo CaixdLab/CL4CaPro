@@ -79,7 +79,7 @@ As described in the paper, we used CPTAC-3 lung cancer data and DKFZ prostate ca
 
 #### Process the original CPTAC-3 and DKFZ datasets
 
-Run the script [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) to extract RNA-seq data from the original CPTAC-3 RNA-seq data of individual patients downloaded from the GDC data portal  and put data of all patients in a unified folder, which is then utilized by [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb). 
+Run the script [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) to extract gene expression values from the original CPTAC-3 RNA-seq data of individual patients downloaded from the GDC data portal  and save data of all patients in a unified folder MatchedGeneExp, which is then utilized by [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb). 
 
 
 Preprocess CPTAC3 and DKFZ datasets using notebooks [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb) and [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb).  Data preprocessing includes the following three main steps:
