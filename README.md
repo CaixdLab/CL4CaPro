@@ -79,11 +79,12 @@ As described in the paper, we used CPTAC-3 lung cancer data and DKFZ prostate ca
 
 #### Process the original CPTAC-3 and DKFZ datasets
 
-For the CPTAC-3 dataset downloaded from the NIH using the GDC client, each patient's Gene Expression data is stored in individual folders. To work with the required cancer gene expression data, these need to be extracted and compiled into a larger, unified folder. The script [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) is designed to facilitate this by creating a folder of matched gene expression data, which is then utilized by [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb). Additionally, the folder containing the matched gene expression data is available in a Box folder [CPTAC-3&DKFZ](https://miami.box.com/s/9tv3nycil3y37hit3p1y3mv9ihpf35sj).
+Run the script [*CPTAC3_map.py*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_map.py) to extract RNA-seq data from the original CPTAC-3 RNA-seq data of individual patients downloaded from the GDC data portal  and put data of all patients in unified folder, which is then utilized by [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb). 
+
 
 Preprocess CPTAC3 and DKFZ datasets using notebooks [*CPTAC3_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/CPTAC3_Preprocessing.ipynb) and [*DKFZ_Preprocessing.ipynb*](https://github.com/CaixdLab/CL4CaPro/blob/main/DKFZ_Preprocessing.ipynb).  Data preprocessing includes the following three main steps:
 <ul style="list-style-type:disc">
-  <li>Load RNA-seq and clinical data from the original data files.</li>
+  <li>Load RNA-seq and clinical data from the data files.</li>
   <li>Combine patients' gene expression data with their clinical records to create a comprehensive file.</li>
   <li>Convert gene IDs/symbols used in CPTAC-3 and DKFZ datasets to those used by in the TCGA data and update the data files.</li>
 </ul>
