@@ -33,7 +33,7 @@ We trained models on two RTX 4090 24GB GPU cards with 8 threads. To optimize the
 The TCGA dataset can be downloaded from the <a href="https://gdc.cancer.gov/about-data/publications/pancanatlas">GDC website</a> or from our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">TCGA data<a>. The RNA-seq data file is EBPlusPlusAdjustPANCAN_IlluminaHiSeq_RNASeqV2.geneExp.tsv,  and the clinical data file is TCGA-CDR-SupplementalTableS1.xlsx. Both files should be placed in the folder CL4CAPro.  TCGA datasets were used to train and test our models. </li>
   
   <li>CPTAC-3 dataset <br />
-CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>. We have downloaded the data and placed the files in the Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CAPro/CPTAC-3&DKFZ</a>. In particular, RNA-seq data files are in the subfolder <a href="https://miami.box.com/s/9e9fx9dn24exib9v4s68baqjpzczovk8">GeneExp</a>.   They were used to validate the lung cancer models trained with TCGA data. </li>
+CPTAC-3 RNA-seq and clinical data  can be downloaded from <a href="https://portal.gdc.cancer.gov/projects/CPTAC-3">GDC data portal</a>. We have downloaded the data and placed the files in the Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CAPro/CPTAC-3&DKFZ</a>. In particular, RNA-seq data files are in the subfolder GeneExp.   They were used to validate the lung cancer models trained with TCGA data. </li>
 
   <li>DKFZ prostate dataset <br /> 
 DKFZ RNA-seq and cinical data can be downloaded from <a href="https://www.cbioportal.org">cBioPortal</a>. We have download the data and placed the file in  the Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CAPro/CPTAC-3&DKFZ</a>. The data were used to validate prostate cancer models trained with TCGA data.  </li>
@@ -44,7 +44,7 @@ Zhao, X., Rødland, E. A., Sørlie, T., Vollan, H. K. M., Russnes, H. G., Kriste
 The dataset can be downloaded from a <a href ="https://www.dropbox.com/scl/fi/f19cymyk5m9li9esnprpb/Affy947.RDS?rlkey=crwv3hpe2a7jwiku2ww3nl81b&dl=0">site</a> provided by the first authour of the paper or our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">OncotypeDX</a>. All files should be placed in the folder  CL4CAPro/OncotypeDX.  </li>
 
   <li> CL-based Classifiers and CLCox models  <br />
-  CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available in our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CaPro_Models</a>. The folder CL4CaPro_Models including the two subfolders should be placed in the folder CL4CAPro.   The file for each model is about 1GB.</li>
+CL-based classifiers for 18 types of cancer and CLCox models for 19 types of cancer trained with the TCGA data are available in our Box folder <a href="https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca">CL4CaPro_Models</a>. The folder CL4CaPro_Models including the two subfolders should be placed in the folder CL4CAPro.   The file for each model is about 1GB.</li>
 </ul>
 
 If all the content in Box folder [CL4CaPro](https://miami.box.com/s/ylmvqynbtchx5xhof0quaeu9w62mxaca) are downloaded and placed in the folder CL4CaPro where the code is installed, all necessary data and models are ready to use. 
