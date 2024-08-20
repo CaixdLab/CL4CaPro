@@ -346,8 +346,8 @@ def random_split(cancer_group, data, percent, seed, task, val = True):
                     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.125)
                 x_train_get.append(x_train)
                 y_train_get.append(y_train)
-                x_val_get.append(x_test)
-                y_val_get.append(y_test)
+                x_val_get.append(x_val)
+                y_val_get.append(y_val)
 
             for split_get in get_data_1_split:
                 end = start + split_get
@@ -362,8 +362,8 @@ def random_split(cancer_group, data, percent, seed, task, val = True):
                     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.125)
                 x_train_get.append(x_train)
                 y_train_get.append(y_train)
-                x_val_get.append(x_test)
-                y_val_get.append(y_test)
+                x_val_get.append(x_val)
+                y_val_get.append(y_val)
         else:
             raise TypeError("No corresponded task given")
 
