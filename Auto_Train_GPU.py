@@ -43,7 +43,7 @@ def run_training(get_seed, device, cancer_group, task_get):
         input_dim = 20531
     elif cancer_group == 'MSE':
         input_dim = 20531
-    elif cancer_group == 'CCPRC' or cancer_group == 'KIRP':
+    elif cancer_group == 'CCPRC' or cancer_group == 'KIRC' or cancer_group == 'KIRP':
         input_dim = 20531
     elif cancer_group == 'HC':
         input_dim = 20531
