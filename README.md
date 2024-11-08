@@ -272,16 +272,20 @@ python Cox_methods.py --cancer_group BRCA --seed {seed} --core 20 > PlotLog/{}.l
 ## Citation
 If you find our research useful, please cite our paper as follows:
 
-@article{sun2023contrastive,
-  title={Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values},
-  author={Sun, Anchen and Chen, Zhibin and Cai, Xiaodong},
-  journal={arXiv preprint arXiv:2306.06276},
-  year={2023}
+@article{sun2024deep,
+  title={Deep contrastive learning for predicting cancer prognosis using gene expression values},
+  author={Sun, Anchen and Franzmann, Elizabeth J and Chen, Zhibin and Cai, Xiaodong},
+  journal={Briefings in bioinformatics},
+  volume={25},
+  number={6},
+  pages={bbae544},
+  year={2024},
+  publisher={Oxford University Press}
 }
 
 ## Brief information of the paper
 ### Title
-Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Values
+Deep contrastive learning for predicting cancer prognosis using gene expression values
 
 ### Authors
 - Anchen Sun
@@ -290,4 +294,4 @@ Contrastive Learning for Predicting Cancer Prognosis Using Gene Expression Value
 - Xiaodong Cai
 
 ### Abstract
-Recent advancements in image classification have demonstrated that contrastive learning (CL) can aid in further learning tasks by acquiring good feature representation from a limited number of data samples. In this paper, we applied CL to tumor transcriptomes and clinical data to learn feature representations in a low-dimensional space. We then utilized these learned features to train a  classifier to categorize tumors into a high- or low-risk group of recurrence.  Using data from The Cancer Genome Atlas (TCGA), we demonstrated that CL can significantly improve classification accuracy. Specifically, our CL-based classifiers achieved an area under the receiver operating characteristic curve (AUC) greater than 0.8 for 14 types of cancer, and an AUC greater than 0.9 for 2 types of cancer.  We also developed CL-based Cox (CLCox) models  for predicting cancer prognosis.  Our CLCox models trained with the TCGA data outperformed existing methods significantly in predicting the prognosis of 19 types of cancer under consideration.  The performance of CLCox models and CL-based classifiers trained with TCGA lung and prostate cancer data were validated using the data from two independent cohorts.  We also show that the CLCox model trained with the whole transcriptome  significantly outperforms  the Cox model trained with the 21 genes of  Oncotype DX  that is in clinical use for breast cancer patients.  CL-based classifiers and CLCox models for 19 types of cancer   are publicly available and can be used to  predict  cancer prognosis using the RNA-seq transcriptome of  an individual tumor.  Python codes for model training and testing are also publicly accessible, and can be applied to train new CL-based models using gene expression data of tumors. 
+Recent advancements in image classification have demonstrated that contrastive learning (CL) can aid in further learning tasks by acquiring good feature representation from a limited number of data samples. In this paper, we applied CL to tumor transcriptomes and clinical data to learn feature representations in a low-dimensional space. We then utilized these learned features to train a classifier to categorize tumors into a high- or low-risk group of recurrence. Using data from The Cancer Genome Atlas (TCGA), we demonstrated that CL can significantly improve classification accuracy. Specifically, our CL-based classifiers achieved an area under the receiver operating characteristic curve (AUC) greater than 0.8 for 14 types of cancer, and an AUC greater than 0.9 for 3 types of cancer. We also developed CL-based Cox (CLCox) models for predicting cancer prognosis. Our CLCox models trained with the TCGA data outperformed existing methods significantly in predicting the prognosis of 19 types of cancer under consideration. The performance of CLCox models and CL-based classifiers trained with TCGA lung and prostate cancer data were validated using the data from two independent cohorts. We also show that the CLCox model trained with the whole transcriptome significantly outperforms the Cox model trained with the 16 genes of Oncotype DX that is in clinical use for breast cancer patients. The trained models and the Python codes are publicly accessible and provide a valuable resource that will potentially find clinical applications for many types of cancer.
